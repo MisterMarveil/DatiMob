@@ -1,0 +1,120 @@
+<template>
+    <div class="page page-register_form">
+        <div class="page-content">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url(img/2.jpg)" class="card-header align-items-flex-end">DatiMob</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">Did you know that you can transfer money with DatiMob?</p>
+                    <p><b>We check your number....</b></p>
+                    <p>You will receive a code by SMS. Enter to confirm your number</p>
+                </div>
+				<form class=" form-store-data" id="token_code">
+					<input type="hidden" name="type" value="confirm-token">
+					<div class="list">
+						<ul>
+							<li class="item-content item-input">
+								<div class="item-inner">
+									<div class="item-title item-floating-label">Enter the code here</div>
+									<div class="item-input-wrap">
+										<input type="number" name="token" id="code" placeholder="code..." required validate pattern="[0-9]*" data-error-message="Only numbers please!">
+										<span class="input-clear-button"></span>
+									</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                </form>
+                <div class="card-footer"><a href="#" id="Edit" class="link back">Edit number</a><a href="#" id="Next" class="link Next">Next... <i class="fa fa-chevron-right"></i></a></div>
+            </div>
+        </div>
+    </div>
+</template>
+<style>
+    @import "css/Dati_intlTelInput.css";
+    @import "css/framework7-keypad.css";
+    .page-content{
+    background-color:#efeff4;
+    }
+    .demo-card-header-pic .card-header {
+    height: 80vw;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    }
+    .demo-card-header-pic .card-content-padding .date{
+    color: #8e8e93;
+    }
+    .card-header{
+    color:var(--f7-theme-color);
+    font-size:35px;
+    }
+    .card-content{
+    }
+</style>
+<script>
+    // script must return component object
+    var tel=500;
+    return {
+    	data: function () {
+    		return {
+    		}
+    	},
+    	on: {
+    		pageInit: function () {
+    			$('#Next').click(function () {
+					var formData = app.form.convertToData('#token_code');
+					formSubmit(formData);
+				});   
+    			$('#Edit').click(function () {
+					getPage({ name: 'register_form' });
+				});
+
+				if(typeof (SMSReceive) != 'undefined') {
+					SMSReceive.startWatch(function() {
+							console.log('SMSReceive: SMS Watching started');
+							document.addEventListener('onSMSArrive', function(e) {
+								var IncomingSMS = e.data;
+								console.log('onSMSArrive(address:' + IncomingSMS.address+" body:"+IncomingSMS.body+")");
+								var smsBody = IncomingSMS.body;
+								if(smsBody.indexOf("DATI CODE:")>=0){
+									smsBody = smsBody.replace(/DATI CODE:/g, '');
+									smsBody = smsBody.replace(/ /g, '');
+									if(smsBody != "" && smsBody!=undefined){
+										$('#code').val(smsBody);
+										var formData = app.form.convertToData('#token_code');
+										formSubmit(formData);
+									}
+								}
+							});
+						}, function() {
+							console.log('SMSReceive: Plugin failed to start watching');
+					});/*
+					app.on('onSMSArrive', function (e) {
+						var IncomingSMS = e.data;
+						console.log('onSMSArrive(address:' + IncomingSMS.address+" body:"+IncomingSMS.body+")");
+						var smsBody = IncomingSMS.body;
+						if(smsBody.indexOf("DATI CODE:")>=0){
+							smsBody = smsBody.replace(/DATI CODE:/g, '');
+							smsBody = smsBody.replace(/ /g, '');
+							if(smsBody != "" && smsBody!=undefined){
+								$('#code').val(smsBody);
+								var formData = app.form.convertToData('#token_code');
+								formSubmit(formData);
+							}
+						}
+					});*/
+				}
+    		},
+    		pageAfterOut: function () {
+				if(typeof (SMSReceive) != 'undefined') {
+					
+					SMSReceive.stopWatch(function() {
+							console.log('SMSReceive: SMS Watching stopped');
+						}, function() {
+							console.log('SMSReceive: Plugin failed to stop watching');
+					});
+				}
+    		},
+    	}
+    }
+</script>

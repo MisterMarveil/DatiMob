@@ -1,0 +1,15 @@
+.sprite {
+    background: url("../img/call_sprite.png") no-repeat;
+    width: 38px; /* Icon width */
+    height: 38px; /* Icon height */
+    display: inline-block; /* Display icon as inline block */    
+}
+.sprite-call-in{
+    background-position: 0 -38px; /* Icon background position in sprite */
+}
+.sprite-call-out{
+    background-position: -38px -38px; /* Icon background position in sprite */
+}
+.sprite-call-missed{
+    background-position: -114px -38px; /* Icon background position in sprite */
+}

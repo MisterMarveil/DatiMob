@@ -1,0 +1,192 @@
+<template>
+   <div class="page page-home">
+		<div class="navbar navbar-large-transparent">
+			<div class="navbar-bg"></div>
+			<div class="navbar-inner">
+				<div class="left">
+					<a href="#" class="link icon-only profile ">
+						<i class="icon fa fa-user-circle"></i>
+					</a>
+				</div>
+				<div class="right">
+					<a href="#" link="menu" modal="modal" class="link icon-only">
+						<i class="fa fa-align-justify"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="page-content">
+			<div class="group_topup">
+				<div class="row status">
+					<div class="col"> You balance</div>
+				</div>
+				<div class="row">
+					<div class="col solde"> $----</div>
+					<button class="col button button-large button-fill topup">Topup</button>
+				</div>
+			</div>
+			<div class="block-title">Be Cloud Be Free</div>
+			<div class="block">
+				<div class="row">
+					<div class="col services new">
+						<div class="content">
+							<a class="nav-link trans services " for="money-transfer" data-tarns="money-transfer" href="#" role="tab" data-toggle="tab">
+								<i class="fas fa-hand-holding-usd"></i><br>DatiCash
+							</a>
+						</div>
+					</div>
+					<div class="col services">
+						<div class="content">
+							<a class="nav-link active trans services" for="International-call" data-tarns="international-call-ct" href="#" role="tab" data-toggle="tab">
+								<i class="fas fa-phone-volume"></i><br>DatiCall
+								<div class="row status" style="position:relative;margin-top:15px;">
+									<i style='position:absolute;left:0px;top:3px;color:#f00;font-size:10px;' for="1" class='fa fa-circle '> </i>
+									<span style="position:absolute;left:13px;color:#000;font-size:12px;;overflow:hidden;text-align:left;" ></span>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col services">
+						<div class="content">
+							<a class="nav-link active trans services" for="Bill-payment" data-tarns="bill-payment-ct" href="#" role="tab" data-toggle="tab">
+								<i class="fas fa-file-invoice-dollar"></i><br>DatiPay
+							</a>
+						</div>
+					</div>
+					<div class="col services">
+						<div class="content">
+							<a class="nav-link active trans services topup" data-tarns="" href="#" role="tab" data-toggle="tab">
+								<i class="fas fa-money-check-alt"></i><br>TopUp
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col services">
+						<div class="content">
+							<a class="nav-link active trans services" for="Phone-credit" data-tarns="money-transfer" href="#" role="tab" data-toggle="tab">
+								<i class="fas fa-mobile-alt"></i><br>AirTime
+							</a>
+						</div>
+					</div>
+					<div class="col services">
+						<div class="content">
+							<a class="nav-link active trans services" for="Send-SMS" data-tarns="send-sms-ct" href="#" role="tab" data-toggle="tab">
+								<i class="fas fa-comment-dots"></i><br>end SMS
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
+<style>
+    .services{
+		background: #fff;
+		text-align: center;
+		color: #000;
+		border: 1px solid #ddd;
+		padding: 5px;
+		margin-bottom: 15px;
+		font-size: 12px;
+		height:150px;
+		box-shadow: 3px 5px 5px #ddd;
+		overflow:hidden;
+	}
+	.services .content{
+		align-items: center;
+		margin-top: 35px;
+	}
+	.services a{
+		box-shadow: none;
+		border: none;
+		font-size:20px;
+		color: var(--f7-theme-color);
+		align-items: center;
+	}
+	
+	.services a i{
+		font-size:35px;
+		font-weight:bold;
+	}
+	.group_topup{
+		padding: 5px;
+	}
+	.solde{
+		font-size:30px;
+		font-weight:bold;
+	}
+	.new{
+		background-image: url("img/new.png");
+		background-position: left top;
+		background-repeat: no-repeat;
+		background-size: 50%;
+	}
+</style>
+<script>
+    // script must return component object
+    
+    return {
+    	data: function () {
+    		return {
+    		}
+    	},
+    	methods: {
+    		openAlert: function () {
+    		},
+    	},
+    	on: {
+    		pageBeforein: function () {
+    		// do something on page init
+				
+				//mainView.router.clearPreviousHistory()
+				//console.log(mainView.router.currentRoute.name +" online "+app.online);
+				//page=mainView.router.currentRoute.name;
+				//app.keypad.destroy ();
+				$('.profile').click(function () {
+					//getPage({ name: 'register_form' });
+				});
+
+				$('.topup').click(function () {
+					getPage({ 
+						name: 'mont_topup'
+					});
+				});
+				$('.services').click(function (event) {
+					operation.step="account-topup";
+					operation.type = $(this).attr('for');
+					if(operation.type=="money-transfer"){
+						//getPage("montant");
+						setAlert("alert-info", "Ce service sera disponible sur notre plateforme très bientot!",null,"service_will_be_available");
+					}
+					else if(operation.type=="Bill-payment"){
+						//operation.montant=2;
+						setAlert("alert-info", "Ce service sera disponible sur notre plateforme très bientot!",null,"service_will_be_available");
+					}
+					else if(operation.type=="International-call"){
+						getPage('International_call');
+					}
+					else if(operation.type=="Phone-credit"){
+						setAlert("alert-info", "Ce service sera disponible sur notre plateforme très bientot!",null,"service_will_be_available");
+					}
+					else if(operation.type=="Send-SMS"){
+						setAlert("alert-info", "Ce service sera disponible sur notre plateforme très bientot!",null,"service_will_be_available");
+					}
+				});
+				status();
+				//getSolde();
+				setBalance();
+				
+    		},
+			pageAfterin:function (){
+				//mainView.router.clearPreviousHistory();
+			},
+    		pageAfterOut: function () {
+    		// page has left the view
+    		},
+    	}
+    }
+</script>

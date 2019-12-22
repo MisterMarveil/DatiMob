@@ -1,0 +1,164 @@
+<template>
+<div class="page page-menu">
+    <div class="page-content" >
+		<span style="color:var(--f7-theme-color);font-size:20px;" class="close_menu"> <i class="fa fa-angle-left"></i> Back</span>
+        <div class="block searchbar-hide-on-search">
+            <p></p>
+        </div>
+        <div class="list">
+			<ul>
+				<li>
+					<a class='item-content country' href='#' link="password">
+						<div class='item-inner'>
+							<div class='item-title'>Logout</div>
+							<div class='item-after'><i class='fa fa-sign-out-alt'></i></div>
+						</div>
+					</a>
+				</li>
+			<ul>
+        </div>
+        <div class="list">
+			<ul>
+				<li>
+					<a class='item-content country' href='#' link="mont_topup">
+						<div class='item-inner'>
+							<div class='item-title'> Account topup</div>
+							<div class='item-after'><i class='fa fa-dollar-sign'></i></div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a class='item-content  country' href='#'>
+						<div class='item-inner'>
+							<div class='item-title'>Profile</div>
+							<div class='item-after'><i class='fa fa-user-circle'></i></div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a class='item-content country' href='#'>
+						<div class='item-inner'>
+							<div class='item-title'>Address</div>
+							<div class='item-after'><i class='fa fa-map-marker-alt'></i></div>
+						</div>
+					</a>
+				</li>
+			<ul>
+        </div>
+        <div class="list ">
+			<ul>
+				<li>
+					<a class='item-content  Pin' href='#'>
+						<div class='item-inner'>
+							<div class='item-title'>Pin code</div>
+							<div class='item-after'><i class='fa fa-key'></i></div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a class='item-content Change_account' href='#'>
+						<div class='item-inner'>
+							<div class='item-title'>Change account</div>
+							<div class='item-after'><i class='fa fa-exchange-alt'></i></div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a class='item-content  ' href='#'>
+						<div class='item-inner'>
+							<div class='item-title'>Setting</div>
+							<div class='item-after'><i class='fa fa-cogs'></i></div>
+						</div>
+					</a>
+				</li>
+			<ul>
+        </div>
+        <div class="list">
+			<ul>
+				<li>
+					<a class='item-content  Help' href='#'>
+						<div class='item-inner'>
+							<div class='item-title'>Help</div>
+							<div class='item-after'><i class='fa fa-question-circle'></i></div>
+						</div>
+					</a>
+				</li>
+			<ul>
+        </div>
+    </div>
+</div>
+</template>
+
+<style>
+	.page-menu, ul{
+		width:100%;
+		height:100%;/*
+		background-color: var(--f7-theme-color);
+		color:#fff;*/
+	}
+	li{
+		color:#fff;
+		width:100%;
+	}
+	.list a{
+		color:var(--f7-theme-color);
+	}
+</style>
+
+<script>
+	// script must return component object
+	
+	return {/*
+		data: function () {
+			var countryData = window.intlTelInputGlobals.getCountryData();
+			return {
+				countryData:countryData,
+			}
+		},*/
+		on: {
+			pageInit: function () {
+			//	app.keypad.destroy();
+			// do something on page init
+				$('.keypad ').css("display","none");
+				
+				$('.close_menu').click(function () {
+					$('.pqge_modal').remove();
+				});
+				
+				$('.list a').click(function () {
+					$('.pqge_modal').remove();
+				});
+				
+				$('.Help').click(function () {
+					$('body').append("<div id=aide style='position:fixed; top:0px; width:100%; height:100%; z-index: 999;background-color:#eee;'><img src='./img/DatiMob_toujours.gif' width='100%' height='100%'></div>");
+					$('#aide').click(function () {
+						$('#aide').remove();
+					});
+				});
+				
+				$('.Change_account').click(function (event) {
+					user = null;
+					window.localStorage.setItem("user", JSON.stringify(user));
+					window.location.href="home.html";
+				});
+				
+				$('.Pin').click(function (event) {
+					setAlert("alert-info", "Are you sure you want to change your password?", function(result){
+						if(result){
+							getPage({ 
+								name: 'password', 
+								params: { passType: 2}
+							});
+						}
+						else{
+						}
+					}, null,999999,true);
+				});
+			},
+			pageAfterOut: function () {
+			// page has left the view
+			//	$('.keypad ').css("display","block");
+			},
+		}
+	}
+</script>

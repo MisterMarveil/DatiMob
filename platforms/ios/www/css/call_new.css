@@ -1,0 +1,296 @@
+@font-face {
+font-family: "FontAwesome";
+font-weight: normal;
+font-style : normal;
+       src : url("./../assets/css/font-awesome-4.7.0/fonts/fontawesome-webfont.eot"),
+             url("./../assets/css/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf"),
+             url("./../assets/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff"),
+             url("./../assets/css/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2");
+}
+
+@font-face {
+font-family: "DIGITFONT";
+font-weight: normal;
+font-style : normal;
+src : url("./../css/fonts/PTSerif-Bold.ttf");
+}
+
+html, body{
+  height:100%;
+}
+
+body{
+    background-image: -webkit-linear-gradient(top, #f4f1ee, #fff);
+    background-image: -webkit-linear-gradient(top, #f4f1ee, #fff);
+    background-image: linear-gradient(top, #f4f1ee, #fff);
+}
+footer{    
+    background-image: -webkit-linear-gradient(top, #00aff0, #2196f3);
+    background-image: linear-gradient(top, #00aff0, #2196f3);
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+    text-align: center;
+    font-size: 0.9em;
+    color: #efefef;
+}
+
+
+  hr{
+      margin: 0;
+  }
+  .buttonHolder{        
+      width: 100%;  
+      margin: 0 13%;
+    }
+@media only all and (max-width: 990px){
+    .buttonHolder{  
+      margin: 0 11%;
+    }
+}
+
+@media only all and (max-width: 760px){
+    .buttonHolder{  
+      margin: 0 10%;
+    }
+}
+
+@media only all and (max-width: 560px){
+    .buttonHolder{  
+      margin: 0 9%;
+    }
+}
+
+@media only all and (min-height: 550px){
+    hr{
+       margin: 3%;
+    } 
+}
+
+@media only all and (max-height: 450px){
+    .countdown{
+        display: none;
+    } 
+}
+
+@media only all and (max-width: 360px){
+    .buttonHolder{  
+      margin: 0 5%;      
+    }    
+}
+
+@media only all and (max-width: 244px){
+    .buttonHolder{  
+      margin: 0;
+    }
+}
+
+    .button{
+        background-image: -webkit-linear-gradient(top, #00aff0, #2196f3);
+        background-image: linear-gradient(top, #00aff0, #2196f3);
+        
+        border-radius: 50%;
+        box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, .3), inset 0px 4px 1px 1px #dcdcec, inset 0px -3px 1px 1px rgba(204,198,197,.5);
+        float:left;
+        height: 50px;
+        margin: 1%;
+        position: relative;
+        width: 50px;			
+        -webkit-transition: all .1s linear;
+        transition: all .1s linear;
+        
+    }
+   /* .button.phonebook, .button.swipe{
+        background-image: -webkit-linear-gradient(top, #000, #2196f3);
+        background-image: linear-gradient(top, #000, #2196f3);
+    }*/        
+    .div_button{
+        margin: 2% 0;
+        float: left;
+        width: 33.33%;
+        position: relative;
+    }
+   /* .div_button_call{
+        width: 100%;
+    }
+    .call{        
+        left: 33.33%;            
+    }*/
+
+    .button:after{
+        color:#e9e6e4;
+        /*color: #212121;*/
+        content: "";
+        display: block;
+        font-size: 20px;
+        height: 20px;
+        text-decoration: none;
+        text-shadow: 0px -1px 1px #bdb5b4, 1px 1px 1px white;
+        position: absolute;
+        width: 20px;
+        left: 15px;
+        top: 15px;
+    }
+
+    
+    .one:after{
+        content: "1";
+        left: 21px;
+    }
+
+    .two:after{
+        content: "2";  /*"✿";*/
+        left: 23px;
+    }
+
+    .three:after{
+        content: "3";       /*"✔";*/
+        left:23px;
+    }
+
+    .four:after{
+        content: "4";
+        left: 24px;
+    }
+    
+    .five:after{
+        content: "5";
+        left: 24px;
+    }
+    
+    .six:after{
+        content: "6";
+        left: 24px;
+    }
+    
+    .seven:after{
+        content: "7";
+        left: 24px;
+    }
+    
+    .eight:after{
+        content: "8";
+        left: 24px;			
+    }
+
+    .nine:after{
+        content: "9";
+        left: 24px;
+    }
+    
+    .star:after{
+        content: "*";
+        left: 24px;
+    }
+    
+    .zero:after{
+        content: "0";
+        left: 24px;
+    }
+    
+    .sharp:after{        
+        content: "#";
+        left: 24px;
+    }
+    
+   
+    .phonebook:after{
+        content: "\f2bb";        
+        font-family: "FontAwesome";
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: none;
+    }
+    
+    .call:after{
+        content: "\f095";
+        font-family: "FontAwesome";
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: none;
+    }
+    
+    .swipe:after{
+        content: "\f112";
+        font-family: "FontAwesome";
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: none;
+    }
+    
+
+    .button:hover{
+        background-image: -webkit-linear-gradient(top, #007bff, #006ae);
+        background-image: linear-gradient(top, #007bff, #006ae);
+        color:#0088cc;
+        text-align: center;
+        font-weight: bold;
+    }
+      
+
+    .button:active{
+        background-image: -webkit-linear-gradient(top, #2196f3, #423afc);
+        background-image: linear-gradient(top, #2196f3, #423afc);
+        box-shadow: 0 3px 5px 0 rgba(0,0,0,.4), inset 0px -3px 1px 1px rgba(204,198,197,.5);
+    }
+
+    .button:active:after{
+        color:#0088cc;
+        text-shadow: 0px -1px 1px #fff, 0px 1px 1px black;
+        color: #efefef;
+        text-weight: bold;
+    }
+    
+    #password{
+        background: #ededed;
+        margin: 3.5%;
+        width: 92%;
+        font-size: 4em;
+        text-align: center;
+        border: 1px solid #d5d5d5;
+    }
+    .title_label{
+        width: 100%;
+        font-size: 1.7em;
+        color: #e1e1e1;
+    }
+    .align_center{
+        text-align: center;
+    }
+    label{
+        margin: 0;
+    }
+    .hidden{
+        display:none;
+        
+    }
+    .card-header{
+        color: #efefef;
+        margin: 0;
+        width: 100%;
+        background-image: -webkit-linear-gradient(top, #00aff0, #2196f3);
+        background-image: linear-gradient(top, #00aff0, #2196f3);
+    }
+    
+    #error-msg {
+      color: red;
+    }
+    #valid-msg {
+      color: #00C900;
+    }
+    #phone{
+        font-family: 'DIGITFONT';
+        font-size: 1.2em;
+        width: 100%;
+        color: #2c2c2c;
+        text-align: center;
+    }
+    input.error {      
+      position: relative;
+      top: -25px;
+      border: 1px solid #FF7C7C;
+    }
+    .hide {
+      display: none;
+    }
+     

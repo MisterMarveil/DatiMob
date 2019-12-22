@@ -1,0 +1,277 @@
+
+html, body{
+  height:100%;
+}
+
+body{
+    background-image: -webkit-linear-gradient(top, #f4f1ee, #fff);
+    background-image: linear-gradient(top, #f4f1ee, #fff);
+	overflow: hidden;
+}
+footer{    
+    background-color:#00aff0;
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+    text-align: center;
+    font-size: 0.9em;
+    color: #efefef;
+}
+
+
+  body {
+    background-color: lightblue;
+  }
+  hr{
+      margin: 0;
+  }
+	.row{   
+		position:absolute;
+		margin-top: 50vh;
+		transform: translateY(-50%);
+		width:100%;
+	}
+	.buttonHolder{   
+		position:relative;
+		width:90%;
+		height:300px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+/*
+@media only all and (max-width: 990px){
+    .buttonHolder{  
+      margin: 0 11%;
+    }
+}
+
+@media only all and (max-width: 760px){
+    .buttonHolder{  
+      margin: 0 10%;
+    }
+}
+
+@media only all and (max-width: 560px){
+    .buttonHolder{  
+      margin: 0 9%;
+    }
+}
+
+@media only all and (max-width: 360px){
+    .buttonHolder{  
+      margin: 0 5%;      
+    }    
+}
+
+@media only all and (max-width: 244px){
+    .buttonHolder{  
+      margin: 0;
+    }
+}
+
+@media only all and (min-height: 500px){
+    hr{
+       margin: 3%;
+    } 
+}
+*/
+@media only all and (max-height: 550px){
+    hr{
+        display: none;
+    } 
+}
+
+@media only all and (max-height: 450px){
+    label{
+        display: none;
+    } 
+}
+
+@media only all and (max-height: 600px) and (min-width: 450px){
+    .countdown,hr,h4{
+        display: none;
+    } 
+}
+.button{/*
+	background-image: -webkit-linear-gradient(top, #00aff0, #00aff0);
+	background-image: linear-gradient(top, #00aff0, #00aff0);
+
+	border-radius: 0%;
+	box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, .3), inset 0px 4px 1px 1px #dcdcec, inset 0px -3px 1px 1px rgba(204,198,197,.5);
+	-webkit-transition: all .1s linear;
+	background-color:#f00;
+	transition: all .1s linear;*/
+	float:left;
+	height: 60px;
+	
+	position: relative;
+				
+	width:100%;
+	
+}        
+.div_button, .swipe,.question{
+	margin: 2% 0;
+	float: left;
+	width: 33.33%;
+	position: relative;
+}
+.div_button_swipe{
+	background-image: -webkit-linear-gradient(top, #00aff0, #00aff0);
+	background-image: linear-gradient(top, #00aff0, #00aff0);
+	width: 100%;
+}
+.swipe{
+	font-size: 1.5em;
+	color: #00aff0;
+	position: relative;     
+	top: 16px;
+}
+.buttonHolder .fa-question:before{
+	position: relative;
+	font-size: 0.8em;
+	left: 6%;            
+	top: 17px;
+	content: "FORGOT?";
+}
+.button:after{
+	color:#000;
+	content: "";
+	display: block;
+	font-size: 30px;
+	height: 30px;/*
+	text-decoration: none;
+	text-shadow: 0px -1px 1px #bdb5b4, 1px 1px 1px white;
+	position: absolute;
+	width: 30px;
+	left: 15px;
+	top: 8px;
+	color:#000;*/
+}
+
+
+.one:after{
+	content: "1";
+	left: 21px;
+}
+
+.two:after{
+	content: "2";  /*"✿";*/
+	left: 23px;
+}
+
+.three:after{
+	content: "3";       /*"✔";*/
+	left:23px;
+}
+
+.four:after{
+	content: "4";
+	left: 24px;
+}
+
+.five:after{
+	content: "5";
+	left: 24px;
+}
+
+.six:after{
+	content: "6";
+	left: 24px;
+}
+
+.seven:after{
+	content: "7";
+	left: 24px;
+}
+
+.eight:after{
+	content: "8";
+	left: 24px;		
+}
+
+.nine:after{
+	content: "9";
+	left: 24px;
+}
+
+.zero:after{
+	content: "0";
+	left: 24px;
+}
+
+.button:hover{/*
+	background-image: -webkit-linear-gradient(top, #00aff0, #006ae);
+	background-image: linear-gradient(top, #00aff0, #006ae);*/
+	color:#0088cc;
+	text-align: center;
+	font-weight: bold;
+}
+	
+  .button:active{
+	background-color:#00aff0;
+	box-shadow: 0 3px 5px 0 rgba(0,0,0,.4), inset 0px -3px 1px 1px rgba(204,198,197,.5);
+}
+
+.button:active:after{
+	color:#0088cc;
+	text-shadow: 0px -1px 1px #fff, 0px 1px 1px black;
+	color: #efefef;
+	text-weight: bold;
+}
+
+
+
+#password{
+	background: #ededed;
+	margin: 3.5%;
+	width: 92%;
+	font-size: 4em;
+	text-align: center;
+	border: 1px solid #d5d5d5;
+}
+#password:focus{
+	outline: none;
+	margin: 0;
+}
+.title_label{
+	width: 100%;
+	font-size: 1.7em;
+	color: #00aff0;
+}
+.align_center{
+	text-align: center;
+}
+label{
+	margin: 0;
+}
+.countdown{
+	font-size: 0.7em;
+	color: #00aff0;
+}
+.hidden{
+	display:none;
+	
+}
+.card-title{
+	color: #efefef;
+}
+.card-header{
+    background-color:#00aff0;
+	margin: 0;
+	width: 100%;
+}
+#steps .fa, #steps .fas{
+	background: transparent;
+	color:#00aff0;
+	margin-left:5px;
+	font-size:0.80em;
+}
+#steps .fa-check-circle{
+	color:#00aff0;
+}
+#keyboard_section{
+	width:100%;
+	text-align: center;
+	
+}
+

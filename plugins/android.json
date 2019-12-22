@@ -1,0 +1,40 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-android-permissions": {
+      "PACKAGE_NAME": "com.daticloud.datimob"
+    },
+    "cordova-plugin-screen-orientation": {
+      "PACKAGE_NAME": "com.daticloud.datimob"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.daticloud.datimob"
+    },
+    "cordova_voip_plugin": {
+      "PACKAGE_NAME": "com.daticloud.datimob"
+    },
+    "cordova-plugin-advanced-websocket": {
+      "PACKAGE_NAME": "com.daticloud.datimob"
+    },
+    "cordova-plugin-sms-receive": {
+      "PACKAGE_NAME": "com.daticloud.datimob"
+    },
+    "cordova-plugin-advanced-http": {
+      "PACKAGE_NAME": "com.daticloud.datimob"
+    }
+  },
+  "dependent_plugins": {
+    "es6-promise-plugin": {
+      "PACKAGE_NAME": "com.daticloud.datimob"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.daticloud.datimob"
+    }
+  }
+}

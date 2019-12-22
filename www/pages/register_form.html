@@ -1,0 +1,134 @@
+<template>
+    <div class="page page-register_form">
+        <div class="page-content">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url(img/mbr-1920x1275.jpg)" class="card-header align-items-flex-end">DatiMob</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">Be Cloud Be Free</p>
+                    <p>Enjoy cloud services with DatiMob, be free to fill all your dreams. We guarantee your satisfaction through our cloud, the one that always gives you more freedom...</p>
+                    <p>Enter your number to get started</p>
+                </div>
+				<form class=" form-store-data" id="register-form">
+					<input type="hidden" name="type" value="register-form">
+					<div class="list">
+						<ul>
+							<li class="item-content item-input">
+								<div class="item-inner">
+									<div class="item-title">Phone number</div>
+									<div class="item-input-wrap">
+										<input type="tel" name="phonenumber" id="phone" placeholder="" required validate pattern="[0-9]*" data-error-message="Only numbers please!">
+										<span class="input-clear-button"></span>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+                </form>
+                <br><br>
+                <div class="card-footer"><a href="#" class="link"></a><a href="#" class="link Next">Next__ <i class="fa fa-chevron-right"></i></a></div>
+            </div>
+        </div>
+    </div>
+</template>
+<style>
+    @import "css/Dati_intlTelInput.css";
+    @import "css/framework7-keypad.css";
+    .page-content{
+    background-color:#efeff4;
+    }
+    .demo-card-header-pic .card-header {
+    height: 50vw;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    }
+    .demo-card-header-pic .card-content-padding .date{
+    color: #8e8e93;
+    }
+    .card-header{
+    color:var(--f7-theme-color);
+    font-size:35px;
+    }
+    .card-content{
+    }
+</style>
+<script>
+   
+    return {
+    	
+    	on: {
+    		pageInit: function () {
+    		// do something on page init
+				//console.log(mainView.router.currentRoute.name +" online "+app.online);
+				//page=mainView.router.currentRoute.name;
+    			var input = document.querySelector("#phone");
+    			if (input != null) {
+    				TelInput = intlTelInput(input, {
+    					separateDialCode: true,
+    					autoPlaceholder: "polite",
+    					placeholderNumberType: "MOBILE",
+    					autoHideDialCode: false,
+    					nationalMode: true,
+    					utilsScript: "js/utils.js"
+    				});/*
+    				input.addEventListener("open:countrydropdown", function(e) {
+    					$("#country-listbox").addClass("iti__hide");
+    					app.tel=tel;
+    					mainView.router.navigate({ name: 'country_list' });
+    				});*/
+					$('.iti__flag-container').click(function () {
+						getPage({ name: 'country_list' },null,"modal");
+					});
+    				app.on('country_search', function (query) {
+    					if(query==""){
+    						console.log("quitter");
+    						return;
+    					}
+    					var filterSpecialCharacter = /^[a-zA-Z0-9-]*$/;
+    					if(!filterSpecialCharacter.test(query)){
+    						return;
+    					}
+    
+    					var _countryObject = TelInput._searchForCountry(query);
+    					
+    					if(_countryObject != undefined){
+    						TelInput.setCountry(_countryObject.iso2, true);
+    						//console.log(_countryObject.name);
+    					}
+    				})
+    				/*
+    				var numpad = app.keypad.create({
+    					inputEl: '#phone',
+    					dotButton:false
+    				});*/
+					$('#phone').keyup(function(e) {
+						if(e.keyCode == 13) { //le code de la touche Enter
+							if(TelInput.isValidNumber()){
+								var formData = app.form.convertToData('#register-form');
+								formSubmit(formData);
+								
+							}
+							else
+								app.dialog.alert(translate[_locale]["alert_format_number"]);
+						}
+					});
+    				$('.Next').click(function () {
+    					if(TelInput.isValidNumber()){
+							var formData = app.form.convertToData('#register-form');
+							formSubmit(formData);
+    						
+    					}
+    					else
+    						app.dialog.alert(translate[_locale]["alert_format_number"]);
+    					//	setAlert("alert-danger", "Numéro mal formaté!",null,"alert_format_number");
+    				});
+    			}
+    			
+    			
+    		},
+    		pageAfterOut: function () {
+    		// page has left the view
+    		},
+    	}
+    }
+</script>

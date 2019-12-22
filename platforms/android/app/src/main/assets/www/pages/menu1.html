@@ -1,0 +1,38 @@
+<template>
+    <div class="page page-home">
+        <div class="page-content">
+            <div class="menu-cover">
+                <nav class="menu" style="transform: translateX(0vw);">
+                    <br><span style="color:#fff;font-size:20px;" class="close_menu"> <i class="fa fa-angle-left"></i> Back</span><br><br><br>
+                    <ul>
+                        <li class="menu-item separate"><a href="home.html" for="Out"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Logout</font></font><i class="fa fa-sign-out-alt"></i></a></li>
+                        <li class="menu-item"><a href="#" class="topup "><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> Account topup</font></font><i class="fa fa-dollar-sign"></i></a></li>
+                        <li class="menu-item"><a href="user_infos"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Profile</font></font><i class="fa fa-user-circle"></i></a></li>
+                        <li class="menu-item separate"><a href="address"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Address</font></font><i class="fa fa-map-marker-alt"></i></a></li>
+                        <li class="menu-item"><a href="change-password"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Pin code</font></font><i class="fa fa-key"></i></a></li>
+                        <li class="menu-item"><a href="#" id="Change_account"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Change account</font></font><i class="fa fa-exchange-alt"></i></a></li>
+                        <li class="menu-item separate"><a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Setting</font></font><i class="fa fa-cogs"></i></a></li>
+                        <li class="menu-item"><a href="#" class="Help "><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Help</font></font><i class="fa fa-question-circle"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</template>
+<style>
+    @import "css/menu.css";
+</style>
+<script>
+    // script must return component object
+    
+    return {
+    
+    	on: {
+    		pageBeforein: function () {
+    
+    		},
+    		pageAfterOut: function () {
+    		},
+    	}
+    }
+</script>

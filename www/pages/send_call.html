@@ -1,0 +1,70 @@
+<template>
+   <div class="page page-send_call">
+		<div class="page-content">
+			<div id="send_call_" style="position:fixed;width: 100%; height: 100%;background-color: #165af3;top: 0px;z-index: 0;">
+				<div class="" style="position:absolute; color:#fff; text-align: center; width: 60%;left:20%; height: 30%; top: 30px;;" id="infos_call">
+					<i class="fas fa-user-circle" style="font-size: 90px;"></i><br><br>
+					<span id="call_num" style="font-size: 25px;"></span><br>
+					<span id="call_status" style="font-size: 18px;">Connecting...</span>
+				</div>
+				<div id="call_control" class="" style="position:absolute;width: 100%; height: 30%; top: 40%;background-color: #165aff;" disabled="disabled">
+					<div class="row" style="color:#fff; text-align: center; margin-top: 30px; margin-left: 0px;width: 100%;">
+						<div id="Record" class="" style="width: 20%; height: 20px;margin-left: 10%;"><i class="fa fa-circle"></i><br><span>Record</span></div>
+						<div id="Hold" class="" style="width: 20%; height: 20px;margin-left: 10%;"><i class="fa fa-pause fa-pause-circle-o_ fa-pause-circle_"></i><br><span>Hold</span></div>
+						<div id="Add_call" class="" style="width: 20%; height: 20px;margin-left: 10%;"><i class="fa fa-plus-circle"></i><br><span>Add call</span></div>
+					</div>
+					<div class="row" style="color:#fff; text-align: center; margin-top: 60px; margin-left: 0px;width: 100%;">
+						<div id="Speaker" class="" style="width: 20%; height: 20px;margin-left: 10%;"><i class="fa fa-volume-up"></i><br><span>Speaker</span></div>
+						<div id="Keypad" class="" style="width: 20%; height: 20px;margin-left: 10%;"><i class="fa fa-th"></i><br><span>Keypad</span></div>
+						<div id="Mute" class="" style="width: 20%; height: 20px;margin-left: 10%;;"><i class="fa fa-microphone-slash"></i><br><span>Mute</span></div>
+					</div>
+					<div class="row" style="color:#fff; text-align: center; margin-top: 60px; margin-left: 0px;width: 100%;">
+						<div id="Cancel" class="" style="ccolor:#f00; width: 20%; height: 20px;margin-left: 40%;"><i class="fa fa-tty" style="color:#f00; font-size: 40px;"></i><br><span>Cancel</span></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
+<style>
+</style>
+<script>
+    // script must return component object
+	
+    return {
+    	data: function () {
+    		return {
+    			num: params.num,
+    		}
+    	},
+		
+    	on: {
+    		pageBeforein: function () {
+				//console.log(mainView.router.currentRoute.name +" online "+app.online);
+				call_status = $('#call_status');
+				$('.keypad ').css("display","none");
+				$('#Cancel').click(function (event) {
+					sipManager.hangup();
+				});
+				$('#Speaker').click(function (event) {
+					$('#Speaker').css('color', '#0f0');
+					//$('#Speaker').css('dis', '#0f0');
+					sipManager.toggleSpeaker();
+				});
+				$('#Mute').click(function (event) {
+					$('#Mute').css('color', '#f00');
+					sipManager.toggleMute();
+				});
+				if (typeof callback_func == 'function') {
+					callback_func();
+				}
+				//$('#call_control').attr('disabled','true');
+				$('#call_num').text(params.num);
+				//console.log(" params.num "+params.num);
+    		},
+			pageAfterOut: function () {
+				//$('.keypad ').css("display","block");
+			},
+    	}
+    }
+</script>

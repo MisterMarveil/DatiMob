@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>10</integer>
+	<key>logs</key>
+	<dict>
+		<key>47A7ACA7-DEBD-4D43-BF54-440BB4195B96</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogMajorGroupSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
+			<key>fileName</key>
+			<string>47A7ACA7-DEBD-4D43-BF54-440BB4195B96.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>signature</key>
+			<string>DatiMob-ftsosfiebbhwnvgqcaahwcquepof</string>
+			<key>timeStartedRecording</key>
+			<real>591060509.55592597</real>
+			<key>timeStoppedRecording</key>
+			<real>591060510.22373998</real>
+			<key>title</key>
+			<string>Build target DatiMob</string>
+			<key>uniqueIdentifier</key>
+			<string>47A7ACA7-DEBD-4D43-BF54-440BB4195B96</string>
+		</dict>
+		<key>B5DF574E-BAF0-4F4E-8B83-9DE251B3CD53</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogMajorGroupSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.library.static</string>
+			<key>fileName</key>
+			<string>B5DF574E-BAF0-4F4E-8B83-9DE251B3CD53.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>signature</key>
+			<string>CordovaLib-gmfgpywrvuwxngauvodkxdfefora</string>
+			<key>timeStartedRecording</key>
+			<real>591060509.53549397</real>
+			<key>timeStoppedRecording</key>
+			<real>591060509.55390203</real>
+			<key>title</key>
+			<string>Build target CordovaLib</string>
+			<key>uniqueIdentifier</key>
+			<string>B5DF574E-BAF0-4F4E-8B83-9DE251B3CD53</string>
+		</dict>
+	</dict>
+	<key>preserveOldLogs</key>
+	<true/>
+</dict>
+</plist>

@@ -1,0 +1,101 @@
+<template>
+<div class="page page-payment_method">
+    <div class="navbar navbar-large-transparent">
+			<div class="navbar-bg"></div>
+			<div class="navbar-inner">
+				<div class="left">
+					<a href="#" class="link back"><i class="fa fa-chevron-left"></i> Back</a>
+				</div>
+				<div class="right">
+					<a href="#" link="menu" modal="modal" class="link icon-only">
+						<i class="fa fa-align-justify"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+    <div class="page-content">
+			<div class="titre ">Payment method</div>
+        <div class="block ">
+            <p>By which means would you like to send money ?</p>
+        </div>
+        <div class="list components-list Payment_method">
+            <ul>
+                <li>
+                    <a class="item-content item-link payment_card" href="#" for="./pages/payment_card.html">
+                        <div class="item-media"><i class="fa fa-money-check-alt"></i></div>
+                        <div class="item-inner">
+                            <div class="item-title">Credit/Debit Card</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="item-content item-link " href="#">
+                        <div class="item-media"><i class="fas fa-hand-holding-usd"></i></div>
+                        <div class="item-inner">
+                            <div class="item-title">DatiCash</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="item-content item-link " href="#">
+                        <div class="item-media"><i class="fas fa-mobile-alt"></i></div>
+                        <div class="item-inner">
+                            <div class="item-title">Mobile Money</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="item-content item-link " href="#">
+                        <div class="item-media"><i class="fa fa-university"></i></div>
+                        <div class="item-inner">
+                            <div class="item-title">Bank deposit</div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</template>
+<style>
+	.Payment_method i{
+		color:var(--f7-theme-color);
+	}
+	.Payment_method .item-title{
+		color:#425263;
+	}
+</style>
+
+<script>
+	// script must return component object
+	return {
+		data: function () {
+			var countryData = window.intlTelInputGlobals.getCountryData();
+			return {
+				title: 'Component Page',
+				names: ['John', 'Vladimir', 'Timo'],
+				countryData:countryData,
+			}
+		},
+		methods: {
+			openAlert: function () {
+				var self = this.$app.dialog.alert('Hello world!');
+			},
+		},
+		on: {
+			pageInit: function () {
+			// do something on page init
+				//console.log(mainView.router.currentRoute.name +" online "+app.online);
+				//page=mainView.router.currentRoute.name;
+				
+				$('.payment_card').click(function (event) {
+					getPage({ name: 'payment_card' });
+				});
+				
+			},
+			pageAfterOut: function () {
+			// page has left the view
+			},
+		}
+	}
+</script>
