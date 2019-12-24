@@ -105,7 +105,7 @@ var sipManager = {
 				notif_r=setTimeout(function () {
 					clearTimeout(notif_r);
 					sipManager.register();
-				},120000);
+				},300000);
 			} else {
 				sipManager.isRegister = false;
 				notif_r=setTimeout(function () {

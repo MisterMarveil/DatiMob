@@ -137,6 +137,19 @@
 					else
 						app.dialog.alert(translate[_locale]["alert_fill_fields"]);
 				});
+				
+				$('input').keyup(function(e) {
+					if(e.keyCode == 13) { //le code de la touche Enter
+						var inputs = $('.input-invalid');
+						if(inputs.length==0){
+							var formData = app.form.convertToData('#payment_card');
+							formSubmit(formData);
+						}
+						else
+							app.dialog.alert(translate[_locale]["alert_fill_fields"]);
+						return false;
+					}
+				});
     		},
     	}
     }

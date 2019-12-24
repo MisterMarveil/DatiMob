@@ -6,26 +6,13 @@
                 <div class="card-content card-content-padding">
                     <p class="date">Be Cloud Be Free</p>
                     <p>Enjoy cloud services with DatiMob, be free to fill all your dreams. We guarantee your satisfaction through our cloud, the one that always gives you more freedom...</p>
-                    <p>Enter your number to get started</p>
+                    <p>Enter your number to get started...</p>
                 </div>
 				<form class=" form-store-data" id="register-form">
 					<input type="hidden" name="type" value="register-form">
-					<div class="list">
-						<ul>
-							<li class="item-content item-input">
-								<div class="item-inner">
-									<div class="item-title">Phone number</div>
-									<div class="item-input-wrap">
-										<input type="tel" name="phonenumber" id="phone" placeholder="" required validate pattern="[0-9]*" data-error-message="Only numbers please!">
-										<span class="input-clear-button"></span>
-									</div>
-								</div>
-							</li>
-						</ul>
-					</div>
+					<input type="hidden" id='phonenumber' name="phonenumber" value="0">
+					
                 </form>
-                <br><br>
-                <div class="card-footer"><a href="#" class="link"></a><a href="#" class="link Next">Next__ <i class="fa fa-chevron-right"></i></a></div>
             </div>
         </div>
     </div>
@@ -37,7 +24,7 @@
     background-color:#efeff4;
     }
     .demo-card-header-pic .card-header {
-    height: 50vw;
+    height: 40vw;
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -58,77 +45,95 @@
     	
     	on: {
     		pageInit: function () {
-    		// do something on page init
-				//console.log(mainView.router.currentRoute.name +" online "+app.online);
-				//page=mainView.router.currentRoute.name;
-    			var input = document.querySelector("#phone");
-    			if (input != null) {
-    				TelInput = intlTelInput(input, {
-    					separateDialCode: true,
-    					autoPlaceholder: "polite",
-    					placeholderNumberType: "MOBILE",
-    					autoHideDialCode: false,
-    					nationalMode: true,
-    					utilsScript: "js/utils.js"
-    				});/*
-    				input.addEventListener("open:countrydropdown", function(e) {
-    					$("#country-listbox").addClass("iti__hide");
-    					app.tel=tel;
-    					mainView.router.navigate({ name: 'country_list' });
-    				});*/
-					$('.iti__flag-container').click(function () {
-						getPage({ name: 'country_list' },null,"modal");
-					});
-    				app.on('country_search', function (query) {
-    					if(query==""){
-    						console.log("quitter");
-    						return;
-    					}
-    					var filterSpecialCharacter = /^[a-zA-Z0-9-]*$/;
-    					if(!filterSpecialCharacter.test(query)){
-    						return;
-    					}
-    
-    					var _countryObject = TelInput._searchForCountry(query);
-    					
-    					if(_countryObject != undefined){
-    						TelInput.setCountry(_countryObject.iso2, true);
-    						//console.log(_countryObject.name);
-    					}
-    				})
-    				/*
-    				var numpad = app.keypad.create({
-    					inputEl: '#phone',
-    					dotButton:false
-    				});*/
-					$('#phone').keyup(function(e) {
-						if(e.keyCode == 13) { //le code de la touche Enter
-							if(TelInput.isValidNumber()){
-								var formData = app.form.convertToData('#register-form');
-								formSubmit(formData);
-								
-							}
-							else
-								app.dialog.alert(translate[_locale]["alert_format_number"]);
-						}
-					});
-    				$('.Next').click(function () {
-    					if(TelInput.isValidNumber()){
-							var formData = app.form.convertToData('#register-form');
-							formSubmit(formData);
-    						
-    					}
-    					else
-    						app.dialog.alert(translate[_locale]["alert_format_number"]);
-    					//	setAlert("alert-danger", "Numéro mal formaté!",null,"alert_format_number");
-    				});
-    			}
-    			
+    			ini_key_pad();
+				$('.Next').click(function () {
+					if(TelInput.isValidNumber()){
+						var formData = app.form.convertToData('#register-form');
+						formSubmit(formData);
+						
+					}
+					else
+						app.dialog.alert(translate[_locale]["alert_format_number"]);
+					//	setAlert("alert-danger", "Numéro mal formaté!",null,"alert_format_number");
+				});
     			
     		},
     		pageAfterOut: function () {
     		// page has left the view
     		},
+			pageBeforeremove: function () {
+				close_keypad();
+    		},
     	}
     }
+	
+		
+function ini_key_pad(){
+	var pad = iniNumber_keypad();
+	
+	app.on('key_datimob', function (k) {
+		if($('#phone').val()!=undefined){
+			if($('#phone').val().length>=16)
+				setAlert("alert-danger", "Number too long",null,"alert_long_number");
+			else if(k=='next'){
+				if(TelInput.isValidNumber()){
+					$('#phonenumber').val($('#phone').val());
+					var formData = app.form.convertToData('#register-form');
+					formSubmit(formData);
+					
+				}
+				else
+					app.dialog.alert(translate[_locale]["alert_format_number"]);
+			}
+			else if(k=='help'){
+				app.dialog.alert("Use the \"next\" button to validate your number");
+			}
+			else
+				$('#phone').val($('#phone').val()+k);
+		}
+		else
+			setAlert("alert-danger", "unexpected error");
+	});
+	$('.toolbar-inner .fa-backspace').click(function () {
+		var val =$('#phone').val();
+		val = val.substring(0, val.length - 1); 
+		$('#phone').val(val);
+	});
+	
+	var input = document.querySelector("#phone");
+	if (input != null) {
+		TelInput = intlTelInput(input, {
+			separateDialCode: true,
+			autoPlaceholder: "polite",
+			placeholderNumberType: "MOBILE",
+			autoHideDialCode: false,
+			nationalMode: true,
+			utilsScript: "js/utils.js"
+		});
+		app.on('country_search', function (query) {
+			console.log(query);
+			if(query==""){
+				console.log("quitter");
+				return;
+			}
+			var filterSpecialCharacter = /^[a-zA-Z0-9-]*$/;
+			if(!filterSpecialCharacter.test(query)){
+				return;
+			}
+
+			var _countryObject = TelInput._searchForCountry(query);
+			
+			if(_countryObject != undefined){
+				TelInput.setCountry(_countryObject.iso2, true);
+				curtent_country=_countryObject.iso2
+				//console.log(_countryObject.name);
+			}
+		});
+		$('.iti__flag-container').click(function () {
+			tel = $('#phone').val();
+			getPage({ name: 'country_list' },null,"modal");
+		});
+	}
+	$('#phone').css('padding-left', '78px');
+}
 </script>

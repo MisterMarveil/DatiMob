@@ -7,13 +7,14 @@
 					<a href="#" class="link back"><i class="fa fa-chevron-left"></i> Back</a>
 				</div>
 				<div class="row status" style="right:5px;position:absolute;">
-					<i style='color:#f00;font-size:15px;height:30px;line-height:30px;' for="1" class='fa fa-circle'></i> <span></span>
+					<i style='color:#f00;font-size:15px;height:30px;line-height:30px;' for="1" class='fa fa-circle'></i>&#160;&#160;<span></span>
 				</div>
 			</div>
 		</div>
 		<div class="page-content">
 			<div class="list">
 				<ul>
+					
 				</ul>
 			</div>
 			<div id="showClavier"><img width="50px" src="img/keybord.png"></div>
@@ -111,7 +112,7 @@
 		window.localStorage.setItem("hist", JSON.stringify(hist));
 	}
 	
-	function sendCall(num){
+	function sendCall(num,directCall){
 		operation.callingNumber = num;
 		//console.log(" sendCall "+num);
 		//sipManager.call(num);
@@ -119,16 +120,20 @@
 			name: 'send_call', 
 			params: { num: num}
 		},null,"modal");
-		var req={};
-		req.type = "sipcallinit";
-		req.callercountrycode = operation.callingCodes;
-		req.callerphonenumber = operation.callingNumber.replace('+'+operation.callingCodes, '');;
-		req.socketclienttype = "MOBILE_CLIENT";
-		req.sessionid = user.sessionid;
-		setHistorique(num,req.callercountrycode);
-		req = JSON.stringify(req);
-		sendMessage(req);
-		
+		if(directCall){
+			sipManager.call(operation.callingNumber);
+		}
+		else{
+			var req={};
+			req.type = "sipcallinit";
+			req.callercountrycode = operation.callingCodes;
+			req.callerphonenumber = operation.callingNumber.replace('+'+operation.callingCodes, '');;
+			req.socketclienttype = "MOBILE_CLIENT";
+			req.sessionid = user.sessionid;
+			setHistorique(num,req.callercountrycode);
+			req = JSON.stringify(req);
+			sendMessage(req);
+		}		
 	}
 	
 function ini_key_pad(){
@@ -144,7 +149,18 @@ function ini_key_pad(){
 				if(TelInput.isValidNumber()){
 					var countryData = TelInput.getSelectedCountryData();
 					operation.callingCodes=countryData.dialCode;
-					sendCall(TelInput.getNumber());
+					sendCall(TelInput.getNumber(),false);
+				}
+				else
+					setAlert("alert-danger", "Numéro mal formaté!",null,"alert_format_number");
+			}
+			else if(k=='directCall'){
+				
+				//app.emit('Sip_status', "RegistrationFailed");
+				if(TelInput.isValidNumber()){
+					var countryData = TelInput.getSelectedCountryData();
+					operation.callingCodes=countryData.dialCode;
+					sendCall(TelInput.getNumber(),true);
 				}
 				else
 					setAlert("alert-danger", "Numéro mal formaté!",null,"alert_format_number");
@@ -165,6 +181,7 @@ function ini_key_pad(){
 		val = val.substring(0, val.length - 1); 
 		$('#phone').val(val);
 	});
+	
 	var input = document.querySelector("#phone");
 	if (input != null) {
 		TelInput = intlTelInput(input, {
@@ -189,20 +206,15 @@ function ini_key_pad(){
 			var _countryObject = TelInput._searchForCountry(query);
 			
 			if(_countryObject != undefined){
-				$('.iti__selected-dial-code').text('');
-				//$('.iti__arrow').remove();
 				TelInput.setCountry(_countryObject.iso2, true);
 				curtent_country=_countryObject.iso2
 				//console.log(_countryObject.name);
 			}
 		});
-		
 		$('.iti__flag-container').click(function () {
 			tel = $('#phone').val();
 			getPage({ name: 'country_list' },null,"modal");
 		});
-		//TelInput.setCountry(curtent_country, true);
-		$('#phone').val(tel);
 	}
 	$('#phone').css('padding-left', '78px');
 }

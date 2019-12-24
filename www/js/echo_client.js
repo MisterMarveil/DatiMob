@@ -223,7 +223,14 @@ function completeInfos(res){
 }
 
 function getLien(url, callback){
-	$.get(url, callback, "jsonp")
+	$.get(url, null, function(data,status){
+		if(status=="success"){
+			callback(data);
+		}
+		else{
+			console.log("error: "+status);
+		}
+	});
 }
 
 function getPath(para) {
@@ -264,6 +271,7 @@ if (user == null || user == 'null') {
         mail: "",
 		pass:"",
         device: "USD",
+		solde:"$----",
 		SipUser:{},
 		balance:0,
 		profile:{}
@@ -275,8 +283,8 @@ if (user == null || user == 'null') {
         console.log("erreur capturée :", e);
     }
 }
-user.solde="$----";
 
+user.login=false;
 function getTaux(){
 	var req={};
 	req.type="money-converter";
@@ -306,6 +314,7 @@ function setAlert(type, msg, callback_func, trans_key,delay,showConfim,CANCEL,OK
 	var callfrom_func=msg;
 	var notificationFull=null;
 	var subtitle = "Notification";
+	var styleText="";
 	if(delay==undefined)
 		delay=5000;
 	if(showConfim == undefined)
@@ -321,15 +330,19 @@ function setAlert(type, msg, callback_func, trans_key,delay,showConfim,CANCEL,OK
 	else if(type=="alert-danger"){
 		icon ="<i style='color:var(--f7-theme-color);' class='fa fa-exclamation-triangle'></i>";
 		subtitle="Warning!!";
+		styleText="color:#ff3030;";
 	}
 	else
 		icon ="<i style='color:var(--f7-theme-color);' class='"+type+"'></i>";
 	if(trans_key != undefined){
 		msg = translate[_locale][trans_key];
+		msg="<span style='"+styleText+"' >"+msg+"</span>";
 	}
     clearTimeout(notif_timer);
     app.dialog.close();  //$('#not').remove();
 	
+	if(msg != null && msg.indexOf("unexpected error")>=0)
+		return;
 	if(msg==null){
 		app.dialog.progress("Connexion...");
 		notif_timer = setTimeout(function () {
