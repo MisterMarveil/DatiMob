@@ -108,12 +108,7 @@ var app_ = {
 		get_app();
 		document.addEventListener("backbutton", onBackKeyDown, false);
 		function onBackKeyDown() {
-			if(user.login){
-				getPage({ name: 'services' });
-				return false;
-			}
-			else
-				return true;
+			return last_page();
 		}
         this.receivedEvent('deviceready');
     },

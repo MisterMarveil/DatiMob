@@ -96,7 +96,7 @@ function getPage(url,callback_func,position) {
 		
 		$('.back').click(function (){
 			close_keypad();
-			getPage({ name: 'services' });
+			last_page();
 		});
 		
 		$('body a').click(function (event) {
@@ -116,7 +116,7 @@ function getPage(url,callback_func,position) {
 			return false;
 		});
 	});
-	/*
+	/* 696401413
 	if(page != "" && page!="services" && position!="back"){
 		index_page++;
 		page_last[index_page] = page;
@@ -1325,13 +1325,14 @@ function init(){
 }
 
 function last_page(){
-	if(index_page>0)
-		index_page--;
-	//getPage(page_last[index_page],"back");
-	if(user.login==true)
-		getPage("services");
-	else
-		getPage("login-form");
+	if(user.login){
+		getPage({ name: 'services' });
+		return false;
+	}
+	else{
+		start();
+		return true;
+	}
 }
 
 

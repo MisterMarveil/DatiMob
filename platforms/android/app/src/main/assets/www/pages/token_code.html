@@ -8,7 +8,7 @@
                     <p><b>We check your number....</b></p>
                     <p>You will receive a code by SMS. Enter to confirm your number</p>
                 </div>
-				<form class=" form-store-data" id="token_code">
+				<form class=" form-store-data form-ajax-submit" id="token_code">
 					<input type="hidden" name="type" value="confirm-token">
 					<div class="list">
 						<ul>
@@ -64,7 +64,16 @@
     			$('#Next').click(function () {
 					var formData = app.form.convertToData('#token_code');
 					formSubmit(formData);
-				});   
+				});
+
+				$('#send_value').keyup(function(e) {
+					if(e.keyCode == 13) { //le code de la touche Enter
+						var formData = app.form.convertToData('#token_code');
+						formSubmit(formData);
+						return false;
+					}
+				});
+				
     			$('#Edit').click(function () {
 					getPage({ name: 'register_form' });
 				});
