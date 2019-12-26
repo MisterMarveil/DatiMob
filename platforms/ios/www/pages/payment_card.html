@@ -1,0 +1,156 @@
+<template>
+   <div class="page page-payment_card">
+		<div class="navbar navbar-large-transparent">
+			<div class="navbar-bg"></div>
+			<div class="navbar-inner">
+				<div class="left">
+					<a href="#" class="link back"><i class="fa fa-chevron-left"></i> Back</a>
+				</div>
+				<div class="right">
+					<a href="#" link="menu" modal="modal" class="link icon-only">
+						<i class="fa fa-align-justify"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="page-content">
+			<div class="titre ">Payment details</div>
+			<form class=" form-store-data form-ajax-submit" id="payment_card"><br>
+				<div class="text-center" style="width:100%;text-align:center;">
+					<a href="#" tabindex="0" class="link">Pay with bank account</a>
+				</div>
+				<input type="hidden" name="type" value="account-topup">
+				<input type="hidden" name="locale" value="en_US">
+				<div class="list">
+					<ul>
+						<li class="item-content item-input">
+							<div class="item-inner">
+								<div class="item-title ">Card Number</div>
+								<div class="item-input-wrap">
+									<input type="number" name="creditcardnumber" id="creditcardnumber" placeholder="e.g., 1234 5678 1234 5678" required validate pattern="[1-9]*" data-error-message="Only numbers please!">
+									
+								</div>
+							</div>
+						</li>
+						<li class="item-content item-input">
+							<div class="item-inner">
+								<div class="row ">
+									<div class="col-60 ">
+										<div class="item-title ">Expiration date</div>
+										<div class="item-input-wrap">
+											<div class="col-90">
+												<div class="row no-gap">
+													<div class="col-50">
+														 <select name="creditcardexpirationdate" id="creditcardexpirationdate" placeholder="YY">
+															<option>2019</option>
+															<option>2020</option>
+															<option>2021</option>
+															<option>2022</option>
+															<option>2023</option>
+															<option>2024</option>
+															<option>2025</option>
+															<option>2026</option>
+															<option>2027</option>
+															<option>2028</option>
+															<option>2029</option>
+															<option>2030</option>
+															<option>2031</option>
+															<option>2032</option>
+															<option>2033</option>
+															<option>2034</option>
+															<option>2035</option>
+															<option>2036</option>
+															<option>2037</option>
+															<option>2038</option>
+															<option>2039</option>
+															<option>2040</option>
+														 </select>
+													 </div>
+													 <div class="col-5"  style="height:36px;line-height:36px;font-weight:bold;">/ </div>
+													 <div class="col-45">
+														 <select name="ccmonth" placeholder="MM">
+															<option>01</option>
+															<option>02</option>
+															<option>03</option>
+															<option>04</option>
+															<option>05</option>
+															<option>06</option>
+															<option>07</option>
+															<option>08</option>
+															<option>09</option>
+															<option>10</option>
+															<option>11</option>
+															<option>12</option>
+														 </select>
+													 </div>
+												 </div>
+											</div>
+										</div>
+									</div>
+									<div class="col-40">
+										<div class="item-title ">CVV</div>
+										<div class="item-input-wrap">
+											<div class="col-90" style="">
+												<input type="number" name="creditcardcode" id="creditcardcode" placeholder="Enter the amount here" required validate pattern="[1-9]*" data-error-message="Only numbers please!">
+											</div>
+										</div>
+									</div>
+								</div>
+								
+							</div>
+						</li>
+					</ul>
+				</div>
+			</form>
+			<div class="block">
+				<div class="row">
+					<div class="col"></div>
+					<div class="col "></div>
+					<button class="col button button-fill Next">Next</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
+<style>
+    
+</style>
+<script>
+    // script must return component object
+    return {
+		data: function () {
+			//var annees = window.intlTelInputGlobals.getCountryData();
+			return {
+				title: 'Component Page',
+				names: ['John', 'Vladimir', 'Timo'],
+			//	countryData:countryData,
+			}
+		},
+    	on: {
+    		pageInit: function () {
+				$('.Next').click(function () {
+					var inputs = $('.input-invalid');
+					if(inputs.length==0){
+						var formData = app.form.convertToData('#payment_card');
+						formSubmit(formData);
+					}
+					else
+						app.dialog.alert(translate[_locale]["alert_fill_fields"]);
+				});
+				
+				$('input').keyup(function(e) {
+					if(e.keyCode == 13) { //le code de la touche Enter
+						var inputs = $('.input-invalid');
+						if(inputs.length==0){
+							var formData = app.form.convertToData('#payment_card');
+							formSubmit(formData);
+						}
+						else
+							app.dialog.alert(translate[_locale]["alert_fill_fields"]);
+						return false;
+					}
+				});
+    		},
+    	}
+    }
+</script>

@@ -1,0 +1,140 @@
+<template>
+    <div class="page page-register_form">
+        <div class="page-content">
+            <div class="card demo-card-header-pic">
+                <div style="background-image:url(img/mbr-1920x1275.jpg)" class="card-header align-items-flex-end">DatiMob</div>
+                <div class="card-content card-content-padding">
+                    <p class="date">Be Cloud Be Free</p>
+                    <p>Enjoy cloud services with DatiMob, be free to fill all your dreams. We guarantee your satisfaction through our cloud, the one that always gives you more freedom.</p>
+                    <p><strong>Enter your phonne number to get started...</strong></p>
+                </div>
+				<form class=" form-store-data" id="register-form">
+					<input type="hidden" name="type" value="register-form">
+					<input type="hidden" id='phonenumber' name="phonenumber" value="0">
+					
+                </form>
+            </div>
+        </div>
+    </div>
+</template>
+<style>
+    @import "css/Dati_intlTelInput.css";
+    @import "css/framework7-keypad.css";
+    .page-content{
+    background-color:#efeff4;
+    }
+    .demo-card-header-pic .card-header {
+    height: 30vw;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    }
+    .demo-card-header-pic .card-content-padding .date{
+    color: #8e8e93;
+    }
+    .card-header{
+    color:var(--f7-theme-color);
+    font-size:35px;
+    }
+    .card-content{
+    }
+</style>
+<script>
+   
+    return {
+    	
+    	on: {
+    		pageInit: function () {
+    			ini_key_pad();
+				$('.Next').click(function () {
+					if(TelInput.isValidNumber()){
+						var formData = app.form.convertToData('#register-form');
+						formSubmit(formData);
+						
+					}
+					else
+						app.dialog.alert(translate[_locale]["alert_format_number"]);
+					//	setAlert("alert-danger", "Numéro mal formaté!",null,"alert_format_number");
+				});
+    			
+    		},
+    		pageAfterOut: function () {
+    		// page has left the view
+    		},
+			pageBeforeremove: function () {
+				close_keypad();
+    		},
+    	}
+    }
+	
+		
+function ini_key_pad(){
+	var pad = iniNumber_keypad();
+	
+	app.on('key_datimob', function (k) {
+		if($('#phone').val()!=undefined){
+			if($('#phone').val().length>=16)
+				setAlert("alert-danger", "Number too long",null,"alert_long_number");
+			else if(k=='next'){
+				$('#phone').val($('#phone').val().replace(/\|/g, ''));
+				if(TelInput.isValidNumber()){
+					$('#phonenumber').val($('#phone').val());
+					var formData = app.form.convertToData('#register-form');
+					formSubmit(formData);
+					
+				}
+				else
+					app.dialog.alert(translate[_locale]["alert_format_number"]);
+			}
+			else if(k=='help'){
+				app.dialog.alert("Use the \"next\" button to validate your number");
+			}
+			else
+				$('#phone').val($('#phone').val()+k);
+		}
+		else
+			setAlert("alert-danger", "unexpected error");
+	});
+	$('.toolbar-inner .fa-backspace').click(function () {
+		var val = $('#phone').val().replace(/\|/g, '');
+		val = val.substring(0, val.length - 1); 
+		$('#phone').val(val);
+	});
+	
+	var input = document.querySelector("#phone");
+	if (input != null) {
+		TelInput = intlTelInput(input, {
+			separateDialCode: true,
+			autoPlaceholder: "off",
+			placeholderNumberType: "MOBILE",
+			autoHideDialCode: false,
+			nationalMode: true,
+			utilsScript: "js/utils.js"
+		});
+		app.on('country_search', function (query) {
+			console.log(query);
+			if(query==""){
+				console.log("quitter");
+				return;
+			}
+			var filterSpecialCharacter = /^[a-zA-Z0-9-]*$/;
+			if(!filterSpecialCharacter.test(query)){
+				return;
+			}
+
+			var _countryObject = TelInput._searchForCountry(query);
+			
+			if(_countryObject != undefined){
+				TelInput.setCountry(_countryObject.iso2, true);
+				curtent_country=_countryObject.iso2
+				//console.log(_countryObject.name);
+			}
+		});
+		$('.iti__flag-container').click(function () {
+			tel = $('#phone').val();
+			getPage({ name: 'country_list' },null,"modal");
+		});
+	}
+	$('#phone').css('padding-left', '78px');
+}
+</script>

@@ -1,0 +1,242 @@
+<template>
+   <div class="page page-International_call">
+		<div class="navbar navbar-large-transparent">
+			<div class="navbar-bg"></div>
+			<div class="navbar-inner">
+				<div class="left">
+					<a href="#" class="link back"><i class="fa fa-chevron-left"></i> Back</a>
+				</div>
+				<div class="row status" style="right:5px;position:absolute;">
+					<i style='color:#f00;font-size:15px;height:30px;line-height:30px;' for="1" class='fa fa-circle'></i>&#160;&#160;<span></span>
+				</div>
+			</div>
+		</div>
+		<div class="page-content">
+			<div class="list">
+				<ul>
+					
+				</ul>
+			</div>
+			<div id="showClavier"><img width="50px" src="img/keybord.png"></div>
+		</div>
+	</div>
+</template>
+<style>
+    @import "css/framework7-keypad.css";
+    @import "css/Dati_intlTelInput.css";
+    .key{
+		color:var(--f7-theme-color);
+		font-size:20px;
+    }
+	:root {
+		--f7-keypad-height: 300px;
+	}
+	#showClavier{
+		position:fixed;
+		bottom: 10px;
+		left: 1%;
+		width: 100%;
+		text-align:center;
+		height:60px;
+		font-size: 50px;
+		z-index: 1;
+	}
+</style>
+<script>
+    // script must return component object
+	var curtent_country="us";
+	var tel = ""; 
+	function getHistorique(){
+		var hist = window.localStorage.getItem("hist");
+		var last='';
+		if (hist != null) {
+			try {
+				hist = JSON.parse(hist);
+				for(var index in hist) {
+					
+					last += "<li>"+
+								"<a class='item-content item-link country  hist' href='#' for="+hist[index].dialCode+" num='"+hist[index].val+"'>"+
+									"<div class='item-media'><i class='fa fa-user-circle' style='color:var(--f7-theme-color);font-size:25px;'></i></div>"+
+									"<div class='item-inner'>"+
+										"<div class='item-title'>"+
+											hist[index].val+
+											"<div class='item-footer'><i class='fa fa-external-link-alt'></i> Outgoing call</div>"+
+										"</div>"+
+										"<div class='item-after'>"+hist[index].date+"</div>"+
+									"</div>"+
+								"</a>"+
+							"</li>";
+				}
+			} catch (e) {
+				console.log("erreur capturée :", e);
+			}
+		}
+		$('.list ul').html(last);
+		
+		$('.hist').click(function (event) {
+			var num = $(this).attr('num');
+			operation.callingCodes=$(this).attr('for');
+			setAlert("alert-info", "Call this number?", function(result){
+				if(result){
+					sendCall(num);
+				}
+			}, null,999999,true);
+			
+		});
+	}
+	
+	function setHistorique(contact,Code){
+		var hist = window.localStorage.getItem("hist");
+		var heure = new Date();
+		if (hist == null) {
+			hist={};
+			hist[contact] = {
+				val:contact,
+				dialCode:Code,
+				date:heure.getHours()+":"+ heure.getMinutes()+":"+ heure.getSeconds()
+			}
+		}
+		else {
+			try {
+				hist = JSON.parse(hist);
+				hist[contact] = {
+					val:contact,
+					dialCode:Code,
+					date:heure.getHours()+":"+ heure.getMinutes()+":"+ heure.getSeconds()
+				}
+			} catch (e) {
+				console.log("erreur capturée :", e);
+			}
+		}
+		
+		window.localStorage.setItem("hist", JSON.stringify(hist));
+	}
+	
+	function sendCall(num){
+		operation.callingNumber = num;
+		//console.log(" sendCall "+num);
+		//sipManager.call(num);
+		getPage({ 
+			name: 'send_call', 
+			params: { num: num}
+		},null,"modal");
+		var req={};
+		req.type = "sipcallinit";
+		req.callercountrycode = operation.callingCodes;
+		req.callerphonenumber = operation.callingNumber.replace('+'+operation.callingCodes, '');;
+		req.socketclienttype = "MOBILE_CLIENT";
+		req.sessionid = user.sessionid;
+		setHistorique(num,req.callercountrycode);
+		req = JSON.stringify(req);
+		sendMessage(req);
+		
+	}
+	
+function ini_key_pad(){
+	var pad = iniCall_keypad();
+	
+	app.on('key_datimob', function (k) {
+		if($('#phone').val()!=undefined){
+			if($('#phone').val().length>=16)
+				setAlert("alert-danger", "Number too long",null,"alert_long_number");
+			else if(k=='call'){
+				
+				//app.emit('Sip_status', "RegistrationFailed");
+				$('#phone').val($('#phone').val().replace(/\|/g, ''));
+				if(TelInput.isValidNumber()){
+					var countryData = TelInput.getSelectedCountryData();
+					operation.callingCodes=countryData.dialCode;
+					sendCall(TelInput.getNumber());
+				}
+				else
+					setAlert("alert-danger", "Numéro mal formaté!",null,"alert_format_number");
+			}
+			else if(k=='contact'){
+				//getHistorique();
+				$('.keypad ').css("display","none");
+				//app.emit('Sip_status', "RegistrationSuccess");
+			}
+			else
+				$('#phone').val($('#phone').val()+k);
+		}
+		else
+			setAlert("alert-danger", "unexpected error");
+	});
+	$('.toolbar-inner .fa-backspace').click(function () {
+		var val = $('#phone').val().replace(/\|/g, '');
+		val = val.substring(0, val.length - 1); 
+		$('#phone').val(val);
+	});
+	
+	var input = document.querySelector("#phone");
+	if (input != null) {
+		TelInput = intlTelInput(input, {
+			separateDialCode: true,
+			autoPlaceholder: "off",
+			placeholderNumberType: "MOBILE",
+			autoHideDialCode: false,
+			nationalMode: true,
+			utilsScript: "js/utils.js"
+		});
+		app.on('country_search', function (query) {
+			console.log(query);
+			if(query==""){
+				console.log("quitter");
+				return;
+			}
+			var filterSpecialCharacter = /^[a-zA-Z0-9-]*$/;
+			if(!filterSpecialCharacter.test(query)){
+				return;
+			}
+
+			var _countryObject = TelInput._searchForCountry(query);
+			
+			if(_countryObject != undefined){
+				TelInput.setCountry(_countryObject.iso2, true);
+				curtent_country=_countryObject.iso2
+				//console.log(_countryObject.name);
+			}
+		});
+		$('.iti__flag-container').click(function () {
+			tel = $('#phone').val();
+			getPage({ name: 'country_list' },null,"modal");
+		});
+	}
+	$('#phone').css('padding-left', '78px');
+}
+			
+    return {
+		
+    	on: {
+    		pageInit: function () {
+				//console.log(mainView.router.currentRoute.name +" online "+app.online);
+				
+				getHistorique();
+				/*
+				$('._back').click(function () {
+					close_keypad();
+					getPage({ name: 'services' });
+				});*/
+				$('#showClavier').click(function () {
+					$('.keypad ').css("display","block");
+				});
+				
+				sipManager.init(user.SipUser);
+				//app.emit('Sip_status', "Registering...");
+    		},
+    		pageBeforein: function () {
+				ini_key_pad();
+				console.log(" curtent_country "+curtent_country);
+				status();
+				
+					//getPage({ name: 'country_list' });
+			},
+    		pageAfterOut: function () {
+				//$('.keypad ').css("display","none");
+    		},
+			pageBeforeremove: function () {
+				close_keypad();
+    		},
+    	}
+    }
+</script>

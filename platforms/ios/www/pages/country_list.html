@@ -1,0 +1,99 @@
+<template>
+<div class="page page-country_list">
+    <div class="navbar navbar-large-transparent">
+        <div class="navbar-bg"></div>
+        <div class="navbar-inner">
+            <div class="left">
+                <a href="#" class="link country"><i class="fa fa-chevron-left"></i></a>
+            </div>
+            <div class="title">Country list</div>
+            <div class="right">
+                <a class="link icon-only searchbar-enable" data-searchbar=".searchbar-components">
+					<i class="icon fa fa-search"></i>
+                </a>
+            </div>
+            <form data-search-container=".components-list" data-search-in="a" class="searchbar searchbar-expandable searchbar-components searchbar-init ">
+                <div class="searchbar-inner">
+                    <div class="searchbar-input-wrap">
+                        <input type="search" placeholder="Searches by name or code"/>
+                        <i class="icon fa fa-search"></i>
+                        <span class="input-clear-button"></span>
+                    </div>
+                    <span class="searchbar-disable-button if-not-aurora">Cancel</span>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="page-content" >
+        <div class="block searchbar-hide-on-search">
+            <p>Choose a country or use the search icon to sort by name.</p>
+        </div>
+        <div class="list components-list searchbar-found list_country">
+            <ul>
+            </ul>
+        </div>
+    </div>
+</div>
+</template>
+
+<style>
+	@import "css/Dati_intlTelInput.css";
+</style>
+
+<script>
+	// script must return component object
+	
+	return {/*
+		data: function () {
+			var countryData = window.intlTelInputGlobals.getCountryData();
+			return {
+				countryData:countryData,
+			}
+		},*/
+		on: {
+			pageInit: function () {
+			//	app.keypad.destroy();
+			// do something on page init
+				$('.keypad ').css("display","none");
+				var countryData = window.intlTelInputGlobals.getCountryData();
+				for(var index in countryData) {
+					$('.list_country ul').append(
+						 "<li>"+
+							"<a class='item-content item-link country' href='#' dialCode='"+countryData[index].dialCode+"' iso2='"+countryData[index].iso2+"' name='"+countryData[index].name+"'>"+
+								"<div class='item-media'><i class='iti__flag iti__"+countryData[index].iso2+"'></i></div>"+
+								"<div class='item-inner'>"+
+									"<div class='item-title'>"+countryData[index].name+" +"+countryData[index].dialCode+"</div>"+
+								"</div>"+
+							"</a>"+
+						"</li>"
+					);
+				}
+				var searchbar = app.searchbar.create({
+					el: '.searchbar',
+					searchContainer: '.searchbar-found',
+					searchIn: '.item-title',/*
+					on: {
+						search(sb, query, previousQuery) {
+							console.log(query, previousQuery);
+						}
+					}*/
+				});
+
+				$(document).on('searchbar:search', function (searchbar, query, previousQuery) {
+					app.emit('country_search',query.query);
+				})
+				
+				$('.country').click(function () {
+					app.emit('country_search',$(this).attr('iso2'));
+					$('.pqge_modal ').remove();
+					$('.keypad ').css("display","block");
+					//getPage('services');
+				});
+			},
+			pageAfterOut: function () {
+			// page has left the view
+			//	$('.keypad ').css("display","block");
+			},
+		}
+	}
+</script>

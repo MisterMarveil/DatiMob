@@ -1,0 +1,91 @@
+<template>
+   <div class="page page-Topup_amount">
+		<div class="navbar navbar-large-transparent">
+			<div class="navbar-bg"></div>
+			<div class="navbar-inner">
+				<div class="left">
+					<a href="#" class="link back"><i class="fa fa-chevron-left"></i> Back</a>
+				</div>
+				<div class="right">
+					<a href="#" link="menu" modal="modal" class="link icon-only">
+						<i class="fa fa-align-justify"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="page-content">
+			<div class="titre trans" data-trans="Topup_amount">Montant de recharge</div>
+			<form class=" form-store-data form-ajax-submit" id="Topup_amount">
+				<input type="hidden" name="type" value="montant">
+				<div class="list">
+					<ul>
+						<li class="item-content item-input">
+							<div class="item-inner">
+								<div class="item-title trans" data-trans="amount-topup-ct">Amount</div>
+								<div class="item-input-wrap">
+									<div class="row no-gap">
+										<div class="col-5 currency_label" style="height:36px;line-height:36px;font-weight:bold;"></div>
+										<div class="col-90" style="">
+											<input type="number" name="value" id="send_value" placeholder="Enter the amount here" required validate pattern="[1-9]*" data-error-message="Only numbers please!">
+											<span class="input-clear-button"></span>
+										</div>
+										<div class="col-5" style="height:36px;line-height:36px;"></div>
+									</div>
+								</div>
+								
+							</div>
+						</li>
+					</ul>
+				</div>
+			</form>
+			<div class="block">
+				<div class="row">
+					<div class="col"></div>
+					<div class="col "></div>
+					<button class="col button button-fill Next">Next</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
+<style>
+    
+</style>
+<script>
+    // script must return component object
+    return {
+    	on: {
+    		pageInit: function () {
+				$('.Next').click(function () {
+					var inputs = $('.input-invalid');
+					if(inputs.length==0){
+						var formData = app.form.convertToData('#Topup_amount');
+						formSubmit(formData);
+					}
+					else
+						app.dialog.alert(translate[_locale]["alert_value_bad"]);
+				});
+				
+				$('#send_value').keyup(function(e) {
+					if(e.keyCode == 13) { //le code de la touche Enter
+						var inputs = $('.input-invalid');
+						if(inputs.length==0){
+							var formData = app.form.convertToData('#Topup_amount');
+							formSubmit(formData);
+						}
+						else
+							app.dialog.alert(translate[_locale]["alert_value_bad"]);
+						return false;
+					}
+				});
+			//	$('#origine_currency').text(user.device);
+				if(user.device=="USD"){
+					$('.currency_label').text("$");
+				}
+				else if(user.device=="EUR"){
+					$('.currency_label').text("₡");
+				}
+    		},
+    	}
+    }
+</script>
