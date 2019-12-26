@@ -112,7 +112,7 @@
 		window.localStorage.setItem("hist", JSON.stringify(hist));
 	}
 	
-	function sendCall(num,directCall){
+	function sendCall(num){
 		operation.callingNumber = num;
 		//console.log(" sendCall "+num);
 		//sipManager.call(num);
@@ -120,20 +120,16 @@
 			name: 'send_call', 
 			params: { num: num}
 		},null,"modal");
-		if(directCall){
-			sipManager.call(operation.callingNumber);
-		}
-		else{
-			var req={};
-			req.type = "sipcallinit";
-			req.callercountrycode = operation.callingCodes;
-			req.callerphonenumber = operation.callingNumber.replace('+'+operation.callingCodes, '');;
-			req.socketclienttype = "MOBILE_CLIENT";
-			req.sessionid = user.sessionid;
-			setHistorique(num,req.callercountrycode);
-			req = JSON.stringify(req);
-			sendMessage(req);
-		}		
+		var req={};
+		req.type = "sipcallinit";
+		req.callercountrycode = operation.callingCodes;
+		req.callerphonenumber = operation.callingNumber.replace('+'+operation.callingCodes, '');;
+		req.socketclienttype = "MOBILE_CLIENT";
+		req.sessionid = user.sessionid;
+		setHistorique(num,req.callercountrycode);
+		req = JSON.stringify(req);
+		sendMessage(req);
+		
 	}
 	
 function ini_key_pad(){
@@ -146,21 +142,11 @@ function ini_key_pad(){
 			else if(k=='call'){
 				
 				//app.emit('Sip_status', "RegistrationFailed");
+				$('#phone').val($('#phone').val().replace(/\|/g, ''));
 				if(TelInput.isValidNumber()){
 					var countryData = TelInput.getSelectedCountryData();
 					operation.callingCodes=countryData.dialCode;
-					sendCall(TelInput.getNumber(),false);
-				}
-				else
-					setAlert("alert-danger", "Numéro mal formaté!",null,"alert_format_number");
-			}
-			else if(k=='directCall'){
-				
-				//app.emit('Sip_status', "RegistrationFailed");
-				if(TelInput.isValidNumber()){
-					var countryData = TelInput.getSelectedCountryData();
-					operation.callingCodes=countryData.dialCode;
-					sendCall(TelInput.getNumber(),true);
+					sendCall(TelInput.getNumber());
 				}
 				else
 					setAlert("alert-danger", "Numéro mal formaté!",null,"alert_format_number");
@@ -177,7 +163,7 @@ function ini_key_pad(){
 			setAlert("alert-danger", "unexpected error");
 	});
 	$('.toolbar-inner .fa-backspace').click(function () {
-		var val =$('#phone').val();
+		var val = $('#phone').val().replace(/\|/g, '');
 		val = val.substring(0, val.length - 1); 
 		$('#phone').val(val);
 	});
@@ -186,7 +172,7 @@ function ini_key_pad(){
 	if (input != null) {
 		TelInput = intlTelInput(input, {
 			separateDialCode: true,
-			autoPlaceholder: "polite",
+			autoPlaceholder: "off",
 			placeholderNumberType: "MOBILE",
 			autoHideDialCode: false,
 			nationalMode: true,

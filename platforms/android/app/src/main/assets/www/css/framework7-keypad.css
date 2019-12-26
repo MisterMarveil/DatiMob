@@ -226,6 +226,14 @@ html.device-pixel-ratio-3 .keypad-button:before {
 	background-color:#5cb63d;
 	font-size:18px;
 }
-.keypad-buttons span{
+.key{
+	font-size:20px;
 	color:var(--f7-theme-color);
+}
+.nex_button{
+  width: 100%;
+}
+.keypad-button-letters{
+	font-size:10px;
+	color:#a6a6a6;
 }

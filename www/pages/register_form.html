@@ -5,8 +5,8 @@
                 <div style="background-image:url(img/mbr-1920x1275.jpg)" class="card-header align-items-flex-end">DatiMob</div>
                 <div class="card-content card-content-padding">
                     <p class="date">Be Cloud Be Free</p>
-                    <p>Enjoy cloud services with DatiMob, be free to fill all your dreams. We guarantee your satisfaction through our cloud, the one that always gives you more freedom...</p>
-                    <p>Enter your number to get started...</p>
+                    <p>Enjoy cloud services with DatiMob, be free to fill all your dreams. We guarantee your satisfaction through our cloud, the one that always gives you more freedom.</p>
+                    <p><strong>Enter your phonne number to get started...</strong></p>
                 </div>
 				<form class=" form-store-data" id="register-form">
 					<input type="hidden" name="type" value="register-form">
@@ -24,7 +24,7 @@
     background-color:#efeff4;
     }
     .demo-card-header-pic .card-header {
-    height: 40vw;
+    height: 30vw;
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -76,6 +76,7 @@ function ini_key_pad(){
 			if($('#phone').val().length>=16)
 				setAlert("alert-danger", "Number too long",null,"alert_long_number");
 			else if(k=='next'){
+				$('#phone').val($('#phone').val().replace(/\|/g, ''));
 				if(TelInput.isValidNumber()){
 					$('#phonenumber').val($('#phone').val());
 					var formData = app.form.convertToData('#register-form');
@@ -95,7 +96,7 @@ function ini_key_pad(){
 			setAlert("alert-danger", "unexpected error");
 	});
 	$('.toolbar-inner .fa-backspace').click(function () {
-		var val =$('#phone').val();
+		var val = $('#phone').val().replace(/\|/g, '');
 		val = val.substring(0, val.length - 1); 
 		$('#phone').val(val);
 	});
@@ -104,7 +105,7 @@ function ini_key_pad(){
 	if (input != null) {
 		TelInput = intlTelInput(input, {
 			separateDialCode: true,
-			autoPlaceholder: "polite",
+			autoPlaceholder: "off",
 			placeholderNumberType: "MOBILE",
 			autoHideDialCode: false,
 			nationalMode: true,

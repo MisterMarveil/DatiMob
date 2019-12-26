@@ -1,5 +1,6 @@
-
+var time_keypad=0;
 function close_keypad(){
+	clearTimeout(time_keypad);
 	$('.keypad ').remove();
 	app.off('key_datimob');
 }
@@ -94,6 +95,9 @@ function iniCall_keypad(){
 		else
 			key($(this).children('.key').text());
 	});
+	time_keypad = setTimeout(function () {
+		cusseur();
+	}, 500);
 	return numpad;
 	
 }
@@ -132,6 +136,7 @@ function iniNumber_keypad(){
 			"<span class='keypad-button call_button'><span class='key'>4</span><span class='keypad-button-letters'>GHI</span></span>"+
 			"<span class='keypad-button call_button'><span class='key'>5</span><span class='keypad-button-letters'>JKL</span></span>"+
 			"<span class='keypad-button call_button'><span class='key'>6</span><span class='keypad-button-letters'>MNO</span></span>"+
+			
 			"<span class='keypad-button call_button'><span class='key'>7</span><span class='keypad-button-letters'>PQRS</span></span>"+
 			"<span class='keypad-button call_button'><span class='key'>8</span><span class='keypad-button-letters'>TUV</span></span>"+
 			"<span class='keypad-button call_button'><span class='key'>9</span><span class='keypad-button-letters'>WXYZ</span></span>"+
@@ -152,7 +157,22 @@ function iniNumber_keypad(){
 		else
 			key($(this).children('.key').text());
 	});
+	time_keypad = setTimeout(function () {
+		cusseur();
+	}, 500);
 	return numpad;
 	
 }
 
+function cusseur(){
+	
+	clearTimeout(time_keypad);
+	if($('#phone').val().indexOf("|")>=0){
+		$('#phone').val($('#phone').val().replace(/\|/g, ''));
+	}
+	else
+		$('#phone').val($('#phone').val()+"|");
+	time_keypad = setTimeout(function () {
+		cusseur();
+	}, 500);
+}

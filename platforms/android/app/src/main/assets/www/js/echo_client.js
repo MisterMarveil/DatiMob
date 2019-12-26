@@ -422,12 +422,14 @@ function debug(message) {
         console.log("debug(message) erreur capturée :"+e+"\n"+message);
 		return;
     }
+	reponse(res);
+	/*
 	try {
-		reponse(res);
+		
     } catch (e) {
         console.log("debug(message) erreur capturée :"+e+"\n"+message);
 		return;
-    }
+    }*/
     //debugTextArea.value += message + "\n";
     //debugTextArea.scrollTop = debugTextArea.scrollHeight;
 }
@@ -1358,7 +1360,7 @@ function start(){/*
 
 function natifSocket(){
 	if(methode=="http"){
-		cordova.plugin.http.disableRedirect(true);
+		cordova.plugin.http.disableRedirect(false);
 		cordova.plugin.http.setDataSerializer('urlencoded');
 	}
 	else{
