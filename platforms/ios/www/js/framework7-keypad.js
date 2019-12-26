@@ -165,8 +165,11 @@ function iniNumber_keypad(){
 }
 
 function cusseur(){
-	
 	clearTimeout(time_keypad);
+	if($('#phone').val()==undefined){
+		clearTimeout(time_keypad);
+		return;
+	}
 	if($('#phone').val().indexOf("|")>=0){
 		$('#phone').val($('#phone').val().replace(/\|/g, ''));
 	}

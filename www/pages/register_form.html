@@ -46,6 +46,7 @@
     	on: {
     		pageInit: function () {
     			ini_key_pad();
+				/*
 				$('.Next').click(function () {
 					if(TelInput.isValidNumber()){
 						var formData = app.form.convertToData('#register-form');
@@ -55,7 +56,8 @@
 					else
 						app.dialog.alert(translate[_locale]["alert_format_number"]);
 					//	setAlert("alert-danger", "Numéro mal formaté!",null,"alert_format_number");
-				});
+					
+				});*/
     			
     		},
     		pageAfterOut: function () {
@@ -79,8 +81,21 @@ function ini_key_pad(){
 				$('#phone').val($('#phone').val().replace(/\|/g, ''));
 				if(TelInput.isValidNumber()){
 					$('#phonenumber').val($('#phone').val());
+					/*
 					var formData = app.form.convertToData('#register-form');
-					formSubmit(formData);
+					formSubmit(formData);*/
+					var countryData = TelInput.getSelectedCountryData();
+					var req={};
+					req.type = "test-account";
+					req.countrycode = countryData.dialCode;
+					req.phonenumber = $('#phonenumber').val();
+					req.email = req.countrycode+req.phonenumber+"@daticloud.com";
+					req.password = req.phonenumber;
+					req.fullnumber = '+'+req.countrycode+req.phonenumber;
+					operation.register=req;
+					req = JSON.stringify(req);
+					sendMessage(req);
+					
 					
 				}
 				else

@@ -116,45 +116,7 @@ function getPage(url,callback_func,position) {
 			return false;
 		});
 	});
-	/* 696401413
-	if(page != "" && page!="services" && position!="back"){
-		index_page++;
-		page_last[index_page] = page;
-	}
-	page_last=page;
-    page = url;
-	if(url == "login-form"){
-		if(user!=null){
-			user.login=false;
-			window.localStorage.setItem("user", JSON.stringify(user));
-		}
-		window.location.href="home.html";
-	}
-	else if (typeof (pages[url]) != "undefined") {
-		if(pages[url].head_link!=undefined){
-			var head_link="";
-			jQuery.each(pages[url].head_link, function(index, value) {
-				head_link+=pages[url].head_link[index];
-			});
-			$("body").html(head_link);
-			$("body").append("<div id=Loading style='z-index:999999;background-color:#fff;width:100%;height:100%;text-align:center;'><div style='color:var(--theme-color1);position:absolute;top:48%;width:90%;font-size:25px;'>Loading...</div></div>");
-			$(document).ready(function() {
-				$("body").append(pages[url].body);
-				getPage2(callback_func);
-				$("#Loading").remove();
-			});
-		}
-		else if(pages[url].body!=undefined){
-			$("body").html(pages[url].body);
-			getPage2(callback_func);
-		}
-		else{
-			$("body").html(pages[url]);
-			getPage2(callback_func);
-		}
-		
-       // $("body").html(pages[url]);
-    }*/
+
 }
 
 function completeInfos(res){
@@ -611,6 +573,31 @@ function reponse(res) {
         }
         if (res.type == "call-busy") {
 			sipManager.hangup();
+        } 
+		if (res.type == "test-account") {
+			if(res.value=="account-non-existent"){
+				var request = operation.register;
+				request.type = "register-form";
+				operation.register=request;
+				getPage({ 
+					name: 'password', 
+					params: { passType: 1}
+				});
+			}
+			else if(res.value=="ready"){
+				//console.log('operation: '+JSON.stringify(operation));
+				user.profile=operation.register;
+				user.profile.token="ok";
+				getPage({ 
+					name: 'password', 
+					params: { passType: 0}
+				});
+			}
+			else if(res.value=="need-activation"){
+				setAlert("alert-info", "Entrez le code d'activation que vous allez recevoir par SMS...", function () {
+					getPage("token_code");
+				},"alert_enter_code");
+			}
         }
         if (res.type == "updateprofiledata" || res.type == "sendmailconfirmtoken") {
 			if(res.value=="BAD" && res.type == "updateprofiledata")
@@ -1291,13 +1278,13 @@ function autoStart(){
 	if(user.profile.phonenumber == undefined || user.profile.phonenumber == ""){
 		//getPage("register-form");
 		getPage({ name: 'register_form' });
-	}
+	}/*
 	else if(user.profile.password == user.profile.phonenumber){
 		getPage({ 
 			name: 'password', 
 			params: { passType: 1}
 		});
-	}
+	}*/
 	else{
 		getPage({ 
 			name: 'password', 

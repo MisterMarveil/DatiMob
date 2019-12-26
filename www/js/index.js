@@ -74,6 +74,7 @@ var sipManager = {
 		if(sipManager.isRegister==false || (sipManager.User != user) ){
 			
 			sipManager.User=user;
+			sipManager.User.domaine="98.158.144.238";
 			sipManager.register();
 		}
 		else{
