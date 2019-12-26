@@ -48,7 +48,5 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
-	<key>NSUserActivityTypes</key>
-	<array/>
 </dict>
 </plist>

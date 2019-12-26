@@ -2,7 +2,7 @@
 
 platform :ios, '9.0'
 
-target 'D:\Android\DatiMob\platforms\ios\DatiMob' do
-	project 'D:\Android\DatiMob\platforms\ios\DatiMob.xcodeproj'
-
+target 'D:\Android\DatiMob\DatiMob\platforms\ios\DatiMob' do
+	project 'D:\Android\DatiMob\DatiMob\platforms\ios\DatiMob.xcodeproj'
+	pod 'SocketRocket', '0.5.1'
 end

@@ -5,96 +5,103 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
-		011C885E0A9240B5B767D6E3 /* Linphone.m in Sources */ = {isa = PBXBuildFile; fileRef = C02C54CCBA13414D9B470C53 /* Linphone.m */; };
-		019EC6D20F2B4AEC9EB7C3EE /* libbcg729.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E486B076965D4FA39D344F7E /* libbcg729.a */; };
 		0207DA581B56EA530066E2B4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0207DA571B56EA530066E2B4 /* Images.xcassets */; };
-		0495982764FF46468A5BC9C2 /* libspeex.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 028290F8ECAE460781F82B0F /* libspeex.a */; };
-		070ECBCD89A74367AD82823C /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA0583CF6F824F5A8A91FE0D /* CoreMedia.framework */; };
-		0E48EB5C70784164AA853E87 /* libvpx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D96AB4AC53A34831A580BE27 /* libvpx.a */; };
-		0E4C0D393ACF4E3F96D49115 /* liblinphone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DBB23269B56A46D5B8A93153 /* liblinphone.a */; };
-		0E7E7CD3EC23457DBA871EC2 /* libbctoolbox.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD4FD76A98D499B9A296EDB /* libbctoolbox.a */; };
-		0F102A5C77754A1E96E4AF51 /* libmatroska2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EE3A8FA31F9C495FB5A6BD8E /* libmatroska2.a */; };
-		17B3EFC3887640EB8FD582CD /* libantlr3c.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8ED301857043B3A7DCE8E8 /* libantlr3c.a */; };
-		19CC775FF12F4FFFBBE6AC4C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FAD785AC55D4DDFB8AEF262 /* AVFoundation.framework */; };
 		1D3623260D0F684500981E51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
-		20E00D8D60E848B8A5029639 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D389F7A2C9D4DC2BD04644A /* AudioToolbox.framework */; };
-		241B8651F91D42AD8F2E1276 /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 302E2D691D7745D78CE2015E /* libswscale.a */; };
-		24BB3B1146F64A7B992B7EAE /* AppDelegateCordovaCall.m in Sources */ = {isa = PBXBuildFile; fileRef = FDB4CD0E1AED4A6880A550E5 /* AppDelegateCordovaCall.m */; };
-		29B5BA9F1C8949F782E40574 /* share in Sources */ = {isa = PBXBuildFile; fileRef = D91DD65800274515A10B4B0A /* share */; };
 		301BF552109A68D80062928A /* libCordova.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 301BF535109A57CC0062928A /* libCordova.a */; settings = {ATTRIBUTES = (Required, ); }; };
 		302D95F114D2391D003F00A1 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 302D95EF14D2391D003F00A1 /* MainViewController.m */; };
 		302D95F214D2391D003F00A1 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 302D95F014D2391D003F00A1 /* MainViewController.xib */; };
-<<<<<<< HEAD
 		6AFF5BF91D6E424B00AB3073 /* CDVLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AFF5BF81D6E424B00AB3073 /* CDVLaunchScreen.storyboard */; };
-		011C885E0A9240B5B767D6E3 /* Linphone.m in Sources */ = {isa = PBXBuildFile; fileRef = C02C54CCBA13414D9B470C53 /* Linphone.m */; };
-		5CA4D020257A4580AFF7C50B /* libmsamr.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4736BB4A6CAE4962A2EBCCB9 /* libmsamr.a */; };
-=======
-		36C7F40C5D4742A5A0FB42FD /* libbzrtp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F2A2A515D0D47BA941A69D7 /* libbzrtp.a */; };
-		3957559B651148BB93FA20F1 /* liblinphonetester.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B1371F0B077F4A8CA0C85804 /* liblinphonetester.a */; };
-		41D51971F55A4C859515AA48 /* libspeexdsp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16BB4A856D2B45B7ADFD3B04 /* libspeexdsp.a */; };
-		440FF566A9C14BF086722B7F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 18908337D88D41CB8C281EBD /* libz.tbd */; };
-		4579C66CB0FA47A9AA848A46 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 220601BBA832465C854C9527 /* libresolv.tbd */; };
->>>>>>> 8d6052b947d4b9c74d75922c0e7355d3c08eb4a1
-		5221887F62604935BD36C253 /* libmsbcg729.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 712A2CAFE9F84C5BB7DF3C49 /* libmsbcg729.a */; };
-		572205AA50464038AD65A8FE /* libvo-amrwbenc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DFFB61C29CAF4B05B6E3BB0B /* libvo-amrwbenc.a */; };
-		5C55016C1E3A4BADBD0CAEFF /* libstdc++.6.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C0549740B72D4547B61E3576 /* libstdc++.6.tbd */; };
-		5CA4D020257A4580AFF7C50B /* libmsamr.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4736BB4A6CAE4962A2EBCCB9 /* libmsamr.a */; };
-		5D663073316F48E6A4D43552 /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7496666095224DECA7793E66 /* libopencore-amrnb.a */; };
-		5E4FC5CDC5E24F90803E0193 /* libmsopenh264.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 09236E9B87074E3DA69EED03 /* libmsopenh264.a */; };
-		637E7ACFA72246C7A7F01F51 /* libmsx264.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30BF6C6587A44E939E5E61BA /* libmsx264.a */; };
-		657885C61A8945EE9FABA359 /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05306B548BAC42829549E549 /* libavcodec.a */; };
-		678348E99E73428593AA1270 /* libortp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C09A72C285649D6AB40A968 /* libortp.a */; };
-		69D98A74FF3D406C8B930276 /* libmediastreamer_voip.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E712E7D712248D2AB5430BF /* libmediastreamer_voip.a */; };
-		6AFF5BF91D6E424B00AB3073 /* CDVLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AFF5BF81D6E424B00AB3073 /* CDVLaunchScreen.storyboard */; };
-		7023BE2369E6420EA0BCE4EE /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73E4094F813149ACA262D7AD /* CoreFoundation.framework */; };
-		7198CB47AC6849B2AA150316 /* libcunit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8205A7DD19C4A5FB336CEFD /* libcunit.a */; };
-		723DEDD2A2B446CDA24EC41E /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DF413C9F01A49B2A36EBD7A /* libstdc++.tbd */; };
-		739AB6C6F4CF456180B4EC41 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D8B87A8AEB6D43A3B15E5DD6 /* libsqlite3.tbd */; };
-		7E1837FD440748918B6089E2 /* libx264.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DAC50AA36AB4041B41D77E2 /* libx264.a */; };
-		8F17DED11A154D49941198FA /* libopenh264.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 499FFCEA65D3460F8139B55F /* libopenh264.a */; };
-		9AD01AD5FCB9450E992A7418 /* libmediastreamer_base.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2803B01EF3504A00812513CD /* libmediastreamer_base.a */; };
-		9CDE6FD7381B48EAAE2F9F48 /* libpolarssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59C06FB213F74838AD90EA6A /* libpolarssl.a */; };
-		9DAA92D36C5D4B798D726FEF /* libopencore-amrwb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC33866A7B6C49F28799796E /* libopencore-amrwb.a */; };
-		A24C7533D6FC4316A7613E3D /* libsrtp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BEA7E7D54AE94D16980848BF /* libsrtp.a */; };
-		A625C3CBB4684A4C8CE433BF /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F293B20657AC4E84924E2A0B /* libxml2.tbd */; };
-		A65709C100144745B832E05A /* libopus.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EF450DDD76C41C696EA4C6A /* libopus.a */; };
-		A812D92CAE214FFFACE52B1A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FDEC6CC71C646C8BBF8021D /* CoreData.framework */; };
-		AA67E9AB5AD84C668D4A6E56 /* libebml2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F2910C3DF0D946CF9D4AE5FD /* libebml2.a */; };
-		B08B824859784377BB61B202 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A4C76B9CF664874A0BE024F /* libstdc++.6.0.9.tbd */; };
-		DED32580EDFD408DAFAD51C8 /* libtunnel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04C00C2B69F44EAEA0008A22 /* libtunnel.a */; };
-		E203C2D8F34D4FBD90EC3170 /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6417F405F5204DC69A99CA80 /* libavutil.a */; };
-		E505910D44A149FE87CC9E5E /* CordovaCall.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D6A1B581C53414A987A2933 /* CordovaCall.m */; };
-		E759065D3773424BAEEB21A0 /* libc++abi.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E09F107F2B8C48FA8097728B /* libc++abi.tbd */; };
-		E978190CE24546DFB65467C0 /* libmssilk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC40E215796D4639B0B60283 /* libmssilk.a */; };
-		EFD40E1B3C8C4775A658B9B1 /* libswresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFBB4C304AC4DD2B4DB5396 /* libswresample.a */; };
-		F2BCE581AE0D443493852B4B /* libgsm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44FFD7C1410448E48342AFCC /* libgsm.a */; };
-		F49089B76FD048AF848BF3B5 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F07E8AC0893E4581B0D33D75 /* CoreAudio.framework */; };
-		F4B5128AB2E8402CA9EEF235 /* libcorec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8B39AD2D6304A28BB4EFE3F /* libcorec.a */; };
-		FE1DE407565E40779C617CEC /* libbellesip.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 525EB51329924F93B1BD2EF4 /* libbellesip.a */; };
-		FEF99C3A3A344C8B92C1B84B /* libmswebrtc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 318705E6BD3E4A489D2ED2C4 /* libmswebrtc.a */; };
+		DC8F12B4969E4B9CA53A2805 /* CDVFile.m in Sources */ = {isa = PBXBuildFile; fileRef = F89860D5B3FF4211BCECCC39 /* CDVFile.m */; };
+		2C5BA3B52940492888650DEE /* CDVLocalFilesystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D519FDB0F36484B88ECF091 /* CDVLocalFilesystem.m */; };
+		74DAC035512541719D69935F /* CDVAssetLibraryFilesystem.m in Sources */ = {isa = PBXBuildFile; fileRef = 06AF81E5FDC743548D64E239 /* CDVAssetLibraryFilesystem.m */; };
+		BF4C3422976D49408E41BB8F /* CordovaHttpPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 252714907F14474DADAF4C94 /* CordovaHttpPlugin.m */; };
+		7B5DA04E3C8E4E39906E9B5A /* TextResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0D611B3F41488E91699E19 /* TextResponseSerializer.m */; };
+		1477BC5915674BBE9C85DD92 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E0317CB81109479193F603ED /* AFHTTPSessionManager.m */; };
+		7DAFB058036E404C85DEC942 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B44EBAA77C494CBF967D05DF /* AFNetworkReachabilityManager.m */; };
+		AD214C50CAE442D985FE67D7 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0899C73F204D41D2A2E91C32 /* AFSecurityPolicy.m */; };
+		92EEF7D43952474B8281F24F /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = B2BC6579D38444E4BB533643 /* AFURLRequestSerialization.m */; };
+		B9760885BBF74EDDA9704656 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E7A8A535D343A2A1BAC8A5 /* AFURLResponseSerialization.m */; };
+		35116A1844694455B0628AD6 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C1941C344024D2492B3097C /* AFURLSessionManager.m */; };
+		47987DC323E34704934AF6B2 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46BE55CF45FC4397BA316CF0 /* Security.framework */; };
+		14133DFB9D234A4AA079864F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E3A731662AB46E5BC0CF49D /* SystemConfiguration.framework */; };
+		E8E954E472704F06B006D57A /* WebSocketAdvanced.m in Sources */ = {isa = PBXBuildFile; fileRef = 34FCF041BB1549FE956C9C60 /* WebSocketAdvanced.m */; };
+		248073F6DF1A4545AFC8A438 /* CordovaWebsocketPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3A9AB58C124BBFBA7B004E /* CordovaWebsocketPlugin.m */; };
+		E6B4F0AD3EB148A7BED45E47 /* CDVOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B77A5633714EF68F11FAB7 /* CDVOrientation.m */; };
+		EE80993A3BCC47B48E29B200 /* Linphone.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E7E5B16BDF4C87AF95C897 /* Linphone.m */; };
+		29D3D056FAFF43DC9170C610 /* libmsamr.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F70B62475AF3468995A983D4 /* libmsamr.a */; };
+		C292FA0B9176422DBCF6C45A /* libmsbcg729.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 431FC5F7E786432AA9ACDC09 /* libmsbcg729.a */; };
+		CC14BCE7CA624E18AE112613 /* libmsopenh264.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E3B731389694EB7942A5004 /* libmsopenh264.a */; };
+		72D825A96F40417DA3CE1B3A /* libmssilk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6701523A8D814F7C9D875E54 /* libmssilk.a */; };
+		F0378F730EF349EF89270146 /* libmswebrtc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E35C952248B485E9666B6CE /* libmswebrtc.a */; };
+		12EB56FD015B4C1B9E3874E1 /* libmsx264.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB1F1BBBF5734BFFB7007233 /* libmsx264.a */; };
+		4ACB0DC5F0CD4445906F8908 /* libantlr3c.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E13C2B05CEB4421A8948E37 /* libantlr3c.a */; };
+		3EE61D4AAC07453BAFBABA86 /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BD5AA2385C24CE2A9740D1C /* libavcodec.a */; };
+		1C53039F86EB4E04919E62FD /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 693F210102EE4E31855BF185 /* libavutil.a */; };
+		486BBC4115F245A39157425B /* libbcg729.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 39A56E4197424014914465D2 /* libbcg729.a */; };
+		0915DFB64E824A3E85C8AC72 /* libbctoolbox.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CC3AAFC0F1749C48FF3C2C3 /* libbctoolbox.a */; };
+		520DE40D3C824B2E86EC44A2 /* libbellesip.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BF675B898B14914A9370881 /* libbellesip.a */; };
+		DB9220448A644800B1CB2272 /* libbzrtp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B24E062C99844C1A9CFE5739 /* libbzrtp.a */; };
+		D56E9A49E0A34ACD90F306A6 /* libcorec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E0A1C0A0F754CD1AC744902 /* libcorec.a */; };
+		FA0C6D0A834E48F9B7B4A69E /* libcunit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1F2B37203944372A5E402DC /* libcunit.a */; };
+		7A2D864BEF744725823FF0A7 /* libebml2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C0E8E2F62C3248999E6CE541 /* libebml2.a */; };
+		CBBD0ED35D6249A3B5A96A85 /* libgsm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CD68F2EFC2341089335F3E8 /* libgsm.a */; };
+		0DA5B8D8B5B04EF39835E90E /* liblinphone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1208F4307BA74176BDAB9261 /* liblinphone.a */; };
+		47DE3A080610406A80B75778 /* liblinphonetester.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC74A91F5419415D846F79D1 /* liblinphonetester.a */; };
+		250233CBD81F4EAB857DFD05 /* libmatroska2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 26CCEE380AEA47D6820C9B40 /* libmatroska2.a */; };
+		7D1DC638597F495D99C930B0 /* libmediastreamer_base.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BD1F47788064C989EB3E0F3 /* libmediastreamer_base.a */; };
+		9FC11A161D7E498AAC47CA3D /* libmediastreamer_voip.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78B5C06FD699487C9ECB952D /* libmediastreamer_voip.a */; };
+		BB451D457607472D854C4950 /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6197A4635F2445E1AD17A1FC /* libopencore-amrnb.a */; };
+		7E37C0DE8A1747018A5FFD5D /* libopencore-amrwb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FABE4CD801248279367DB0C /* libopencore-amrwb.a */; };
+		25ABDF9362924A27B7B394F7 /* libopenh264.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 539514C7A1014E598EF2C7BB /* libopenh264.a */; };
+		07326E84E68B4145AB1AA463 /* libopus.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7D15D9EC9045088AEAD035 /* libopus.a */; };
+		22D928342E7946A786B93042 /* libortp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F79384F3CC841C29920F418 /* libortp.a */; };
+		BD33E96AF4114F259580F6FE /* libpolarssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AB5F633120EC43A88AF79D93 /* libpolarssl.a */; };
+		9712B3763D194BAEA9A348E5 /* libspeex.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8850DE407C8E4BB2905D2C6A /* libspeex.a */; };
+		B610813CF65F463FB1CBF21F /* libspeexdsp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CD9AC30D5854192AEFFAA1D /* libspeexdsp.a */; };
+		45C2E5CFEB504B50A52A89CD /* libsrtp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5999FDB35B99474487E2012C /* libsrtp.a */; };
+		4508B4288853479CA4F1F494 /* libswresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4E00501D9949FB961E3E34 /* libswresample.a */; };
+		D290FF198B2A4F05B6D2FECA /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F060AAD71D9B4266ABA369B3 /* libswscale.a */; };
+		8198EA3D885F4B10BA3C0A60 /* libtunnel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DF01EE6203F444086965F87 /* libtunnel.a */; };
+		9FF63AC31E4547F9822ADA17 /* libvo-amrwbenc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FE936A4DA935491B80D8B144 /* libvo-amrwbenc.a */; };
+		04B8A3D2F41045A18CC1CC4F /* libvpx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C3F234BFBE5D4A6AA277088A /* libvpx.a */; };
+		BEB0E3BE2A7841DFB9D51622 /* libx264.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F1AAA2F05294E5ABE03681A /* libx264.a */; };
+		D39DEF6ED8D44E97A0C6E68F /* share in Resources */ = {isa = PBXBuildFile; fileRef = 8257F1675FBF4A29A8672AAE /* share */; };
+		D50FB3EF8C5F4C5C9A2CCFBA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5319BF3AE7F44161BA9DDF22 /* AVFoundation.framework */; };
+		A51EFDDFAE404FAE9B44360A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F21D2D8305334980859FD601 /* AudioToolbox.framework */; };
+		6D973D9C693D4A56AFF827C9 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC5E26E169D44CD9AB57D863 /* CoreFoundation.framework */; };
+		A04CA011154C435DB711D61D /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A46733116ED74BDBBECF56F2 /* CoreMedia.framework */; };
+		E159831BFACE460A952CE337 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E7FCA33837B44F2B8356A51 /* CoreData.framework */; };
+		E0BD56C41FFF4EEFBFA62190 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB2F075E86AC4B6AA721980C /* CoreAudio.framework */; };
+		B191692DB8EF4C6CB465563A /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E8579C0A5E504D1880F5B471 /* libz.tbd */; };
+		8361CBB312C843D6856BEC5F /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 70282246E44A4AA696638673 /* libsqlite3.tbd */; };
+		6FD43AFB5C0843AA888A9746 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BF85BB9B4BBC40CFB69BC765 /* libresolv.tbd */; };
+		7AD7EAED24404B0095D8DA9C /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5859A635887C430B95336CAD /* libxml2.tbd */; };
+		9057EB1BDC7041389DE393BD /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 43E30A48D97C4AA3A6AD7C0B /* libstdc++.6.0.9.tbd */; };
+		16604A778BA94EB8BF38D12E /* libstdc++.6.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EBBCBFD71B4D4F2AB871A340 /* libstdc++.6.tbd */; };
+		BF951E097A2F4AA0A6AC1FAF /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = F136463483004BE0B8EB3B4D /* libstdc++.tbd */; };
+		2AD4C763CC6048C596352071 /* libc++abi.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 800535D3FDDC4145A27E2C25 /* libc++abi.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		301BF534109A57CC0062928A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 301BF52D109A57CC0062928A /* CordovaLib/CordovaLib.xcodeproj */;
+			containerPortal = 301BF52D109A57CC0062928A /* CordovaLib.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = D2AAC07E0554694100DB518D;
 			remoteInfo = CordovaLib;
 		};
 		301BF550109A68C00062928A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 301BF52D109A57CC0062928A /* CordovaLib/CordovaLib.xcodeproj */;
+			containerPortal = 301BF52D109A57CC0062928A /* CordovaLib.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = D2AAC07D0554694100DB518D;
 			remoteInfo = CordovaLib;
 		};
 		907D8123214C687600058A10 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 301BF52D109A57CC0062928A /* CordovaLib/CordovaLib.xcodeproj */;
+			containerPortal = 301BF52D109A57CC0062928A /* CordovaLib.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = C0C01EB21E3911D50056E6CB;
 			remoteInfo = Cordova;
@@ -102,143 +109,112 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0207DA571B56EA530066E2B4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = DatiMob/Images.xcassets; sourceTree = SOURCE_ROOT; };
-		028290F8ECAE460781F82B0F /* libspeex.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; name = libspeex.a; path = DatiMob/Plugins/cordova_voip_plugin/lib/libspeex.a; sourceTree = "<group>"; };
-		04C00C2B69F44EAEA0008A22 /* libtunnel.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; name = libtunnel.a; path = DatiMob/Plugins/cordova_voip_plugin/lib/libtunnel.a; sourceTree = "<group>"; };
-		05306B548BAC42829549E549 /* libavcodec.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; name = libavcodec.a; path = DatiMob/Plugins/cordova_voip_plugin/lib/libavcodec.a; sourceTree = "<group>"; };
-		09236E9B87074E3DA69EED03 /* libmsopenh264.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; name = libmsopenh264.a; path = DatiMob/Plugins/cordova_voip_plugin/lib/mediastreamer/plugins/libmsopenh264.a; sourceTree = "<group>"; };
-		16BB4A856D2B45B7ADFD3B04 /* libspeexdsp.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; name = libspeexdsp.a; path = DatiMob/Plugins/cordova_voip_plugin/lib/libspeexdsp.a; sourceTree = "<group>"; };
-		18908337D88D41CB8C281EBD /* libz.tbd */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		0207DA571B56EA530066E2B4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "DatiMob/Images.xcassets"; sourceTree = SOURCE_ROOT; };
 		1D3623240D0F684500981E51 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1D6058910D05DD3D006BFB54 /* DatiMob.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DatiMob.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		1DAC50AA36AB4041B41D77E2 /* libx264.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; name = libx264.a; path = DatiMob/Plugins/cordova_voip_plugin/lib/libx264.a; sourceTree = "<group>"; };
-		220601BBA832465C854C9527 /* libresolv.tbd */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
-		2803B01EF3504A00812513CD /* libmediastreamer_base.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; name = libmediastreamer_base.a; path = DatiMob/Plugins/cordova_voip_plugin/lib/libmediastreamer_base.a; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* DatiMob.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DatiMob.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		301BF52D109A57CC0062928A /* CordovaLib/CordovaLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = CordovaLib/CordovaLib.xcodeproj; sourceTree = "<group>"; };
+		301BF52D109A57CC0062928A /* CordovaLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = CordovaLib/CordovaLib.xcodeproj; sourceTree = "<group>"; };
 		301BF56E109A69640062928A /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = SOURCE_ROOT; };
 		302D95EE14D2391D003F00A1 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		302D95EF14D2391D003F00A1 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		302D95F014D2391D003F00A1 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
-		302E2D691D7745D78CE2015E /* libswscale.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; name = libswscale.a; path = DatiMob/Plugins/cordova_voip_plugin/lib/libswscale.a; sourceTree = "<group>"; };
 		3047A50F1AB8059700498E2A /* build-debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "build-debug.xcconfig"; path = "cordova/build-debug.xcconfig"; sourceTree = SOURCE_ROOT; };
 		3047A5101AB8059700498E2A /* build-release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "build-release.xcconfig"; path = "cordova/build-release.xcconfig"; sourceTree = SOURCE_ROOT; };
 		3047A5111AB8059700498E2A /* build.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = build.xcconfig; path = cordova/build.xcconfig; sourceTree = SOURCE_ROOT; };
-		30BF6C6587A44E939E5E61BA /* libmsx264.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; name = libmsx264.a; path = DatiMob/Plugins/cordova_voip_plugin/lib/mediastreamer/plugins/libmsx264.a; sourceTree = "<group>"; };
-		318705E6BD3E4A489D2ED2C4 /* libmswebrtc.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; name = libmswebrtc.a; path = DatiMob/Plugins/cordova_voip_plugin/lib/mediastreamer/plugins/libmswebrtc.a; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* DatiMob-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DatiMob-Prefix.pch"; sourceTree = "<group>"; };
-		44FFD7C1410448E48342AFCC /* libgsm.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; name = libgsm.a; path = DatiMob/Plugins/cordova_voip_plugin/lib/libgsm.a; sourceTree = "<group>"; };
-		4736BB4A6CAE4962A2EBCCB9 /* libmsamr.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; name = libmsamr.a; path = DatiMob/Plugins/cordova_voip_plugin/lib/mediastreamer/plugins/libmsamr.a; sourceTree = "<group>"; };
-		499FFCEA65D3460F8139B55F /* libopenh264.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; name = libopenh264.a; path = DatiMob/Plugins/cordova_voip_plugin/lib/libopenh264.a; sourceTree = "<group>"; };
-		4FAD785AC55D4DDFB8AEF262 /* AVFoundation.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		525EB51329924F93B1BD2EF4 /* libbellesip.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; name = libbellesip.a; path = DatiMob/Plugins/cordova_voip_plugin/lib/libbellesip.a; sourceTree = "<group>"; };
-		59C06FB213F74838AD90EA6A /* libpolarssl.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; name = libpolarssl.a; path = DatiMob/Plugins/cordova_voip_plugin/lib/libpolarssl.a; sourceTree = "<group>"; };
-		5A4C76B9CF664874A0BE024F /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
-		5D6A1B581C53414A987A2933 /* CordovaCall.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = CordovaCall.m; path = "cordova-call/CordovaCall.m"; sourceTree = "<group>"; };
-		5DF413C9F01A49B2A36EBD7A /* libstdc++.tbd */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
-		5DFBB4C304AC4DD2B4DB5396 /* libswresample.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; name = libswresample.a; path = DatiMob/Plugins/cordova_voip_plugin/lib/libswresample.a; sourceTree = "<group>"; };
-		6417F405F5204DC69A99CA80 /* libavutil.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; name = libavutil.a; path = DatiMob/Plugins/cordova_voip_plugin/lib/libavutil.a; sourceTree = "<group>"; };
-		6AFF5BF81D6E424B00AB3073 /* CDVLaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CDVLaunchScreen.storyboard; path = DatiMob/CDVLaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
-		6D389F7A2C9D4DC2BD04644A /* AudioToolbox.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		6EF450DDD76C41C696EA4C6A /* libopus.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; name = libopus.a; path = DatiMob/Plugins/cordova_voip_plugin/lib/libopus.a; sourceTree = "<group>"; };
-		712A2CAFE9F84C5BB7DF3C49 /* libmsbcg729.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; name = libmsbcg729.a; path = DatiMob/Plugins/cordova_voip_plugin/lib/mediastreamer/plugins/libmsbcg729.a; sourceTree = "<group>"; };
-		73E4094F813149ACA262D7AD /* CoreFoundation.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
-		7496666095224DECA7793E66 /* libopencore-amrnb.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; name = "libopencore-amrnb.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/libopencore-amrnb.a"; sourceTree = "<group>"; };
-		7C1AE2D13BC7469A8D6AA918 /* include */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = include; path = cordova_voip_plugin/include; sourceTree = "<group>"; };
-		8C09A72C285649D6AB40A968 /* libortp.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; name = libortp.a; path = DatiMob/Plugins/cordova_voip_plugin/lib/libortp.a; sourceTree = "<group>"; };
+		6AFF5BF81D6E424B00AB3073 /* CDVLaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CDVLaunchScreen.storyboard; path = "DatiMob/CDVLaunchScreen.storyboard"; sourceTree = SOURCE_ROOT; };
 		8D1107310486CEB800E47090 /* DatiMob-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "DatiMob-Info.plist"; path = "DatiMob/DatiMob-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = SOURCE_ROOT; };
-		8F2A2A515D0D47BA941A69D7 /* libbzrtp.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; name = libbzrtp.a; path = DatiMob/Plugins/cordova_voip_plugin/lib/libbzrtp.a; sourceTree = "<group>"; };
-		8FDEC6CC71C646C8BBF8021D /* CoreData.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		9E712E7D712248D2AB5430BF /* libmediastreamer_voip.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; name = libmediastreamer_voip.a; path = DatiMob/Plugins/cordova_voip_plugin/lib/libmediastreamer_voip.a; sourceTree = "<group>"; };
-		AA4F566FBC004E6B943B53D3 /* Linphone.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = Linphone.h; path = cordova_voip_plugin/Linphone.h; sourceTree = "<group>"; };
-		B1371F0B077F4A8CA0C85804 /* liblinphonetester.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; name = liblinphonetester.a; path = DatiMob/Plugins/cordova_voip_plugin/lib/liblinphonetester.a; sourceTree = "<group>"; };
-		B8205A7DD19C4A5FB336CEFD /* libcunit.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; name = libcunit.a; path = DatiMob/Plugins/cordova_voip_plugin/lib/libcunit.a; sourceTree = "<group>"; };
-		B8B39AD2D6304A28BB4EFE3F /* libcorec.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; name = libcorec.a; path = DatiMob/Plugins/cordova_voip_plugin/lib/libcorec.a; sourceTree = "<group>"; };
-		BEA7E7D54AE94D16980848BF /* libsrtp.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; name = libsrtp.a; path = DatiMob/Plugins/cordova_voip_plugin/lib/libsrtp.a; sourceTree = "<group>"; };
-		C02C54CCBA13414D9B470C53 /* Linphone.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = Linphone.m; path = cordova_voip_plugin/Linphone.m; sourceTree = "<group>"; };
-		C0549740B72D4547B61E3576 /* libstdc++.6.tbd */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.tbd"; path = "usr/lib/libstdc++.6.tbd"; sourceTree = SDKROOT; };
-		D8B87A8AEB6D43A3B15E5DD6 /* libsqlite3.tbd */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		D91DD65800274515A10B4B0A /* share */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = share; path = cordova_voip_plugin/share; sourceTree = "<group>"; };
-		D96AB4AC53A34831A580BE27 /* libvpx.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; name = libvpx.a; path = DatiMob/Plugins/cordova_voip_plugin/lib/libvpx.a; sourceTree = "<group>"; };
-		DBB23269B56A46D5B8A93153 /* liblinphone.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; name = liblinphone.a; path = DatiMob/Plugins/cordova_voip_plugin/lib/liblinphone.a; sourceTree = "<group>"; };
-		DBD4FD76A98D499B9A296EDB /* libbctoolbox.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; name = libbctoolbox.a; path = DatiMob/Plugins/cordova_voip_plugin/lib/libbctoolbox.a; sourceTree = "<group>"; };
-		DFFB61C29CAF4B05B6E3BB0B /* libvo-amrwbenc.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; name = "libvo-amrwbenc.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/libvo-amrwbenc.a"; sourceTree = "<group>"; };
-		E09F107F2B8C48FA8097728B /* libc++abi.tbd */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++abi.tbd"; path = "usr/lib/libc++abi.tbd"; sourceTree = SDKROOT; };
-		E486B076965D4FA39D344F7E /* libbcg729.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; name = libbcg729.a; path = DatiMob/Plugins/cordova_voip_plugin/lib/libbcg729.a; sourceTree = "<group>"; };
 		EB87FDF31871DA8E0020F90C /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; name = www; path = ../../www; sourceTree = "<group>"; };
 		EB87FDF41871DAF40020F90C /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = ../../config.xml; sourceTree = "<group>"; };
-<<<<<<< HEAD
 		ED33DF2A687741AEAF9F8254 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = "DatiMob/config.xml"; sourceTree = "<group>"; };
-		C02C54CCBA13414D9B470C53 /* Linphone.m */ = {isa = PBXFileReference; name = "Linphone.m"; path = "cordova_voip_plugin/Linphone.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
-		4736BB4A6CAE4962A2EBCCB9 /* libmsamr.a */ = {isa = PBXFileReference; name = "libmsamr.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/mediastreamer/plugins/libmsamr.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
-		712A2CAFE9F84C5BB7DF3C49 /* libmsbcg729.a */ = {isa = PBXFileReference; name = "libmsbcg729.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/mediastreamer/plugins/libmsbcg729.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
-		09236E9B87074E3DA69EED03 /* libmsopenh264.a */ = {isa = PBXFileReference; name = "libmsopenh264.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/mediastreamer/plugins/libmsopenh264.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
-		EC40E215796D4639B0B60283 /* libmssilk.a */ = {isa = PBXFileReference; name = "libmssilk.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/mediastreamer/plugins/libmssilk.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
-		318705E6BD3E4A489D2ED2C4 /* libmswebrtc.a */ = {isa = PBXFileReference; name = "libmswebrtc.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/mediastreamer/plugins/libmswebrtc.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
-		30BF6C6587A44E939E5E61BA /* libmsx264.a */ = {isa = PBXFileReference; name = "libmsx264.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/mediastreamer/plugins/libmsx264.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
-		EF8ED301857043B3A7DCE8E8 /* libantlr3c.a */ = {isa = PBXFileReference; name = "libantlr3c.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/libantlr3c.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
-		05306B548BAC42829549E549 /* libavcodec.a */ = {isa = PBXFileReference; name = "libavcodec.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/libavcodec.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
-		6417F405F5204DC69A99CA80 /* libavutil.a */ = {isa = PBXFileReference; name = "libavutil.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/libavutil.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
-		E486B076965D4FA39D344F7E /* libbcg729.a */ = {isa = PBXFileReference; name = "libbcg729.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/libbcg729.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
-		DBD4FD76A98D499B9A296EDB /* libbctoolbox.a */ = {isa = PBXFileReference; name = "libbctoolbox.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/libbctoolbox.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
-		525EB51329924F93B1BD2EF4 /* libbellesip.a */ = {isa = PBXFileReference; name = "libbellesip.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/libbellesip.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
-		8F2A2A515D0D47BA941A69D7 /* libbzrtp.a */ = {isa = PBXFileReference; name = "libbzrtp.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/libbzrtp.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
-		B8B39AD2D6304A28BB4EFE3F /* libcorec.a */ = {isa = PBXFileReference; name = "libcorec.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/libcorec.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
-		B8205A7DD19C4A5FB336CEFD /* libcunit.a */ = {isa = PBXFileReference; name = "libcunit.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/libcunit.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
-		F2910C3DF0D946CF9D4AE5FD /* libebml2.a */ = {isa = PBXFileReference; name = "libebml2.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/libebml2.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
-		44FFD7C1410448E48342AFCC /* libgsm.a */ = {isa = PBXFileReference; name = "libgsm.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/libgsm.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
-		DBB23269B56A46D5B8A93153 /* liblinphone.a */ = {isa = PBXFileReference; name = "liblinphone.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/liblinphone.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
-		B1371F0B077F4A8CA0C85804 /* liblinphonetester.a */ = {isa = PBXFileReference; name = "liblinphonetester.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/liblinphonetester.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
-		EE3A8FA31F9C495FB5A6BD8E /* libmatroska2.a */ = {isa = PBXFileReference; name = "libmatroska2.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/libmatroska2.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
-		2803B01EF3504A00812513CD /* libmediastreamer_base.a */ = {isa = PBXFileReference; name = "libmediastreamer_base.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/libmediastreamer_base.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
-		9E712E7D712248D2AB5430BF /* libmediastreamer_voip.a */ = {isa = PBXFileReference; name = "libmediastreamer_voip.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/libmediastreamer_voip.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
-		7496666095224DECA7793E66 /* libopencore-amrnb.a */ = {isa = PBXFileReference; name = "libopencore-amrnb.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/libopencore-amrnb.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
-		FC33866A7B6C49F28799796E /* libopencore-amrwb.a */ = {isa = PBXFileReference; name = "libopencore-amrwb.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/libopencore-amrwb.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
-		499FFCEA65D3460F8139B55F /* libopenh264.a */ = {isa = PBXFileReference; name = "libopenh264.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/libopenh264.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
-		6EF450DDD76C41C696EA4C6A /* libopus.a */ = {isa = PBXFileReference; name = "libopus.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/libopus.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
-		8C09A72C285649D6AB40A968 /* libortp.a */ = {isa = PBXFileReference; name = "libortp.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/libortp.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
-		59C06FB213F74838AD90EA6A /* libpolarssl.a */ = {isa = PBXFileReference; name = "libpolarssl.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/libpolarssl.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
-		028290F8ECAE460781F82B0F /* libspeex.a */ = {isa = PBXFileReference; name = "libspeex.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/libspeex.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
-		16BB4A856D2B45B7ADFD3B04 /* libspeexdsp.a */ = {isa = PBXFileReference; name = "libspeexdsp.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/libspeexdsp.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
-		BEA7E7D54AE94D16980848BF /* libsrtp.a */ = {isa = PBXFileReference; name = "libsrtp.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/libsrtp.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
-		5DFBB4C304AC4DD2B4DB5396 /* libswresample.a */ = {isa = PBXFileReference; name = "libswresample.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/libswresample.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
-		302E2D691D7745D78CE2015E /* libswscale.a */ = {isa = PBXFileReference; name = "libswscale.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/libswscale.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
-		04C00C2B69F44EAEA0008A22 /* libtunnel.a */ = {isa = PBXFileReference; name = "libtunnel.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/libtunnel.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
-		DFFB61C29CAF4B05B6E3BB0B /* libvo-amrwbenc.a */ = {isa = PBXFileReference; name = "libvo-amrwbenc.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/libvo-amrwbenc.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
-		D96AB4AC53A34831A580BE27 /* libvpx.a */ = {isa = PBXFileReference; name = "libvpx.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/libvpx.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
-		1DAC50AA36AB4041B41D77E2 /* libx264.a */ = {isa = PBXFileReference; name = "libx264.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/libx264.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
-		D91DD65800274515A10B4B0A /* share */ = {isa = PBXFileReference; name = "share"; path = "cordova_voip_plugin/share"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		AA4F566FBC004E6B943B53D3 /* Linphone.h */ = {isa = PBXFileReference; name = "Linphone.h"; path = "cordova_voip_plugin/Linphone.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
-		7C1AE2D13BC7469A8D6AA918 /* include */ = {isa = PBXFileReference; name = "include"; path = "cordova_voip_plugin/include"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		4FAD785AC55D4DDFB8AEF262 /* AVFoundation.framework */ = {isa = PBXFileReference; name = "AVFoundation.framework"; path = "System/Library/Frameworks/AVFoundation.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
-		6D389F7A2C9D4DC2BD04644A /* AudioToolbox.framework */ = {isa = PBXFileReference; name = "AudioToolbox.framework"; path = "System/Library/Frameworks/AudioToolbox.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
-		73E4094F813149ACA262D7AD /* CoreFoundation.framework */ = {isa = PBXFileReference; name = "CoreFoundation.framework"; path = "System/Library/Frameworks/CoreFoundation.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
-		FA0583CF6F824F5A8A91FE0D /* CoreMedia.framework */ = {isa = PBXFileReference; name = "CoreMedia.framework"; path = "System/Library/Frameworks/CoreMedia.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
-		8FDEC6CC71C646C8BBF8021D /* CoreData.framework */ = {isa = PBXFileReference; name = "CoreData.framework"; path = "System/Library/Frameworks/CoreData.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
-		F07E8AC0893E4581B0D33D75 /* CoreAudio.framework */ = {isa = PBXFileReference; name = "CoreAudio.framework"; path = "System/Library/Frameworks/CoreAudio.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
-		18908337D88D41CB8C281EBD /* libz.tbd */ = {isa = PBXFileReference; name = "libz.tbd"; path = "usr/lib/libz.tbd"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = sourcecode.text-based-dylib-definition; explicitFileType = undefined; includeInIndex = 0; };
-		D8B87A8AEB6D43A3B15E5DD6 /* libsqlite3.tbd */ = {isa = PBXFileReference; name = "libsqlite3.tbd"; path = "usr/lib/libsqlite3.tbd"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = sourcecode.text-based-dylib-definition; explicitFileType = undefined; includeInIndex = 0; };
-		220601BBA832465C854C9527 /* libresolv.tbd */ = {isa = PBXFileReference; name = "libresolv.tbd"; path = "usr/lib/libresolv.tbd"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = sourcecode.text-based-dylib-definition; explicitFileType = undefined; includeInIndex = 0; };
-		F293B20657AC4E84924E2A0B /* libxml2.tbd */ = {isa = PBXFileReference; name = "libxml2.tbd"; path = "usr/lib/libxml2.tbd"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = sourcecode.text-based-dylib-definition; explicitFileType = undefined; includeInIndex = 0; };
-		5A4C76B9CF664874A0BE024F /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = sourcecode.text-based-dylib-definition; explicitFileType = undefined; includeInIndex = 0; };
-		C0549740B72D4547B61E3576 /* libstdc++.6.tbd */ = {isa = PBXFileReference; name = "libstdc++.6.tbd"; path = "usr/lib/libstdc++.6.tbd"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = sourcecode.text-based-dylib-definition; explicitFileType = undefined; includeInIndex = 0; };
-		5DF413C9F01A49B2A36EBD7A /* libstdc++.tbd */ = {isa = PBXFileReference; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = sourcecode.text-based-dylib-definition; explicitFileType = undefined; includeInIndex = 0; };
-		E09F107F2B8C48FA8097728B /* libc++abi.tbd */ = {isa = PBXFileReference; name = "libc++abi.tbd"; path = "usr/lib/libc++abi.tbd"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = sourcecode.text-based-dylib-definition; explicitFileType = undefined; includeInIndex = 0; };
-=======
-		EC40E215796D4639B0B60283 /* libmssilk.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; name = libmssilk.a; path = DatiMob/Plugins/cordova_voip_plugin/lib/mediastreamer/plugins/libmssilk.a; sourceTree = "<group>"; };
-		ED33DF2A687741AEAF9F8254 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
-		EE3A8FA31F9C495FB5A6BD8E /* libmatroska2.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; name = libmatroska2.a; path = DatiMob/Plugins/cordova_voip_plugin/lib/libmatroska2.a; sourceTree = "<group>"; };
-		EF8ED301857043B3A7DCE8E8 /* libantlr3c.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; name = libantlr3c.a; path = DatiMob/Plugins/cordova_voip_plugin/lib/libantlr3c.a; sourceTree = "<group>"; };
-		F07E8AC0893E4581B0D33D75 /* CoreAudio.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
-		F2910C3DF0D946CF9D4AE5FD /* libebml2.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; name = libebml2.a; path = DatiMob/Plugins/cordova_voip_plugin/lib/libebml2.a; sourceTree = "<group>"; };
-		F293B20657AC4E84924E2A0B /* libxml2.tbd */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
-		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = DatiMob/config.xml; sourceTree = "<group>"; };
-		FA0583CF6F824F5A8A91FE0D /* CoreMedia.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
-		FC33866A7B6C49F28799796E /* libopencore-amrwb.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; name = "libopencore-amrwb.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/libopencore-amrwb.a"; sourceTree = "<group>"; };
-		FDB4CD0E1AED4A6880A550E5 /* AppDelegateCordovaCall.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = AppDelegateCordovaCall.m; path = "cordova-call/AppDelegateCordovaCall.m"; sourceTree = "<group>"; };
->>>>>>> 8d6052b947d4b9c74d75922c0e7355d3c08eb4a1
+		F89860D5B3FF4211BCECCC39 /* CDVFile.m */ = {isa = PBXFileReference; name = "CDVFile.m"; path = "cordova-plugin-file/CDVFile.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		9D519FDB0F36484B88ECF091 /* CDVLocalFilesystem.m */ = {isa = PBXFileReference; name = "CDVLocalFilesystem.m"; path = "cordova-plugin-file/CDVLocalFilesystem.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		06AF81E5FDC743548D64E239 /* CDVAssetLibraryFilesystem.m */ = {isa = PBXFileReference; name = "CDVAssetLibraryFilesystem.m"; path = "cordova-plugin-file/CDVAssetLibraryFilesystem.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		95AFCEC4697B45B29EDAD2DD /* CDVFile.h */ = {isa = PBXFileReference; name = "CDVFile.h"; path = "cordova-plugin-file/CDVFile.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		FFCB9698C6674428BF2B92AD /* CDVLocalFilesystem.h */ = {isa = PBXFileReference; name = "CDVLocalFilesystem.h"; path = "cordova-plugin-file/CDVLocalFilesystem.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		3606569BD7264509B1BB6EF4 /* CDVAssetLibraryFilesystem.h */ = {isa = PBXFileReference; name = "CDVAssetLibraryFilesystem.h"; path = "cordova-plugin-file/CDVAssetLibraryFilesystem.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		252714907F14474DADAF4C94 /* CordovaHttpPlugin.m */ = {isa = PBXFileReference; name = "CordovaHttpPlugin.m"; path = "cordova-plugin-advanced-http/CordovaHttpPlugin.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		6C0D611B3F41488E91699E19 /* TextResponseSerializer.m */ = {isa = PBXFileReference; name = "TextResponseSerializer.m"; path = "cordova-plugin-advanced-http/TextResponseSerializer.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		E0317CB81109479193F603ED /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; name = "AFHTTPSessionManager.m"; path = "cordova-plugin-advanced-http/AFHTTPSessionManager.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		B44EBAA77C494CBF967D05DF /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; name = "AFNetworkReachabilityManager.m"; path = "cordova-plugin-advanced-http/AFNetworkReachabilityManager.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		0899C73F204D41D2A2E91C32 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; name = "AFSecurityPolicy.m"; path = "cordova-plugin-advanced-http/AFSecurityPolicy.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		B2BC6579D38444E4BB533643 /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; name = "AFURLRequestSerialization.m"; path = "cordova-plugin-advanced-http/AFURLRequestSerialization.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		E9E7A8A535D343A2A1BAC8A5 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; name = "AFURLResponseSerialization.m"; path = "cordova-plugin-advanced-http/AFURLResponseSerialization.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		7C1941C344024D2492B3097C /* AFURLSessionManager.m */ = {isa = PBXFileReference; name = "AFURLSessionManager.m"; path = "cordova-plugin-advanced-http/AFURLSessionManager.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		1B0E22D62F294982A1B36351 /* CordovaHttpPlugin.h */ = {isa = PBXFileReference; name = "CordovaHttpPlugin.h"; path = "cordova-plugin-advanced-http/CordovaHttpPlugin.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		1F9AAFD896FA4C738B21188C /* TextResponseSerializer.h */ = {isa = PBXFileReference; name = "TextResponseSerializer.h"; path = "cordova-plugin-advanced-http/TextResponseSerializer.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		46A5DDB714F64C7DA60A0397 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; name = "AFHTTPSessionManager.h"; path = "cordova-plugin-advanced-http/AFHTTPSessionManager.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		3663749364474CA682FB335A /* AFNetworking.h */ = {isa = PBXFileReference; name = "AFNetworking.h"; path = "cordova-plugin-advanced-http/AFNetworking.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		0DCBC75F1F17497C875303A0 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; name = "AFNetworkReachabilityManager.h"; path = "cordova-plugin-advanced-http/AFNetworkReachabilityManager.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		26118509768843AC9C56EA75 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; name = "AFSecurityPolicy.h"; path = "cordova-plugin-advanced-http/AFSecurityPolicy.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		CEFEB79A0FFA409DB2F1037B /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; name = "AFURLRequestSerialization.h"; path = "cordova-plugin-advanced-http/AFURLRequestSerialization.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		6E89C81D022C4090BEF38038 /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; name = "AFURLResponseSerialization.h"; path = "cordova-plugin-advanced-http/AFURLResponseSerialization.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		278C427B4C3946DF9A40956A /* AFURLSessionManager.h */ = {isa = PBXFileReference; name = "AFURLSessionManager.h"; path = "cordova-plugin-advanced-http/AFURLSessionManager.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		46BE55CF45FC4397BA316CF0 /* Security.framework */ = {isa = PBXFileReference; name = "Security.framework"; path = "System/Library/Frameworks/Security.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		8E3A731662AB46E5BC0CF49D /* SystemConfiguration.framework */ = {isa = PBXFileReference; name = "SystemConfiguration.framework"; path = "System/Library/Frameworks/SystemConfiguration.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		34FCF041BB1549FE956C9C60 /* WebSocketAdvanced.m */ = {isa = PBXFileReference; name = "WebSocketAdvanced.m"; path = "cordova-plugin-advanced-websocket/WebSocketAdvanced.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		2C3A9AB58C124BBFBA7B004E /* CordovaWebsocketPlugin.m */ = {isa = PBXFileReference; name = "CordovaWebsocketPlugin.m"; path = "cordova-plugin-advanced-websocket/CordovaWebsocketPlugin.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		A25A7CA1D0224F64AF25491C /* WebSocketAdvanced.h */ = {isa = PBXFileReference; name = "WebSocketAdvanced.h"; path = "cordova-plugin-advanced-websocket/WebSocketAdvanced.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		BF49B682976A406CAC6E5D69 /* CordovaWebsocketPlugin.h */ = {isa = PBXFileReference; name = "CordovaWebsocketPlugin.h"; path = "cordova-plugin-advanced-websocket/CordovaWebsocketPlugin.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		20B77A5633714EF68F11FAB7 /* CDVOrientation.m */ = {isa = PBXFileReference; name = "CDVOrientation.m"; path = "cordova-plugin-screen-orientation/CDVOrientation.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		4AD9038A27FA4F48915F2EF6 /* CDVOrientation.h */ = {isa = PBXFileReference; name = "CDVOrientation.h"; path = "cordova-plugin-screen-orientation/CDVOrientation.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		22E7E5B16BDF4C87AF95C897 /* Linphone.m */ = {isa = PBXFileReference; name = "Linphone.m"; path = "cordova_voip_plugin/Linphone.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		F70B62475AF3468995A983D4 /* libmsamr.a */ = {isa = PBXFileReference; name = "libmsamr.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/mediastreamer/plugins/libmsamr.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		431FC5F7E786432AA9ACDC09 /* libmsbcg729.a */ = {isa = PBXFileReference; name = "libmsbcg729.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/mediastreamer/plugins/libmsbcg729.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		7E3B731389694EB7942A5004 /* libmsopenh264.a */ = {isa = PBXFileReference; name = "libmsopenh264.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/mediastreamer/plugins/libmsopenh264.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		6701523A8D814F7C9D875E54 /* libmssilk.a */ = {isa = PBXFileReference; name = "libmssilk.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/mediastreamer/plugins/libmssilk.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		5E35C952248B485E9666B6CE /* libmswebrtc.a */ = {isa = PBXFileReference; name = "libmswebrtc.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/mediastreamer/plugins/libmswebrtc.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		FB1F1BBBF5734BFFB7007233 /* libmsx264.a */ = {isa = PBXFileReference; name = "libmsx264.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/mediastreamer/plugins/libmsx264.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		1E13C2B05CEB4421A8948E37 /* libantlr3c.a */ = {isa = PBXFileReference; name = "libantlr3c.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/libantlr3c.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		3BD5AA2385C24CE2A9740D1C /* libavcodec.a */ = {isa = PBXFileReference; name = "libavcodec.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/libavcodec.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		693F210102EE4E31855BF185 /* libavutil.a */ = {isa = PBXFileReference; name = "libavutil.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/libavutil.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		39A56E4197424014914465D2 /* libbcg729.a */ = {isa = PBXFileReference; name = "libbcg729.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/libbcg729.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		1CC3AAFC0F1749C48FF3C2C3 /* libbctoolbox.a */ = {isa = PBXFileReference; name = "libbctoolbox.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/libbctoolbox.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		1BF675B898B14914A9370881 /* libbellesip.a */ = {isa = PBXFileReference; name = "libbellesip.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/libbellesip.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		B24E062C99844C1A9CFE5739 /* libbzrtp.a */ = {isa = PBXFileReference; name = "libbzrtp.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/libbzrtp.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		1E0A1C0A0F754CD1AC744902 /* libcorec.a */ = {isa = PBXFileReference; name = "libcorec.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/libcorec.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		F1F2B37203944372A5E402DC /* libcunit.a */ = {isa = PBXFileReference; name = "libcunit.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/libcunit.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		C0E8E2F62C3248999E6CE541 /* libebml2.a */ = {isa = PBXFileReference; name = "libebml2.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/libebml2.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		8CD68F2EFC2341089335F3E8 /* libgsm.a */ = {isa = PBXFileReference; name = "libgsm.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/libgsm.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		1208F4307BA74176BDAB9261 /* liblinphone.a */ = {isa = PBXFileReference; name = "liblinphone.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/liblinphone.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		EC74A91F5419415D846F79D1 /* liblinphonetester.a */ = {isa = PBXFileReference; name = "liblinphonetester.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/liblinphonetester.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		26CCEE380AEA47D6820C9B40 /* libmatroska2.a */ = {isa = PBXFileReference; name = "libmatroska2.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/libmatroska2.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		5BD1F47788064C989EB3E0F3 /* libmediastreamer_base.a */ = {isa = PBXFileReference; name = "libmediastreamer_base.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/libmediastreamer_base.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		78B5C06FD699487C9ECB952D /* libmediastreamer_voip.a */ = {isa = PBXFileReference; name = "libmediastreamer_voip.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/libmediastreamer_voip.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		6197A4635F2445E1AD17A1FC /* libopencore-amrnb.a */ = {isa = PBXFileReference; name = "libopencore-amrnb.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/libopencore-amrnb.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		3FABE4CD801248279367DB0C /* libopencore-amrwb.a */ = {isa = PBXFileReference; name = "libopencore-amrwb.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/libopencore-amrwb.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		539514C7A1014E598EF2C7BB /* libopenh264.a */ = {isa = PBXFileReference; name = "libopenh264.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/libopenh264.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		EA7D15D9EC9045088AEAD035 /* libopus.a */ = {isa = PBXFileReference; name = "libopus.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/libopus.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		6F79384F3CC841C29920F418 /* libortp.a */ = {isa = PBXFileReference; name = "libortp.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/libortp.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		AB5F633120EC43A88AF79D93 /* libpolarssl.a */ = {isa = PBXFileReference; name = "libpolarssl.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/libpolarssl.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		8850DE407C8E4BB2905D2C6A /* libspeex.a */ = {isa = PBXFileReference; name = "libspeex.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/libspeex.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		9CD9AC30D5854192AEFFAA1D /* libspeexdsp.a */ = {isa = PBXFileReference; name = "libspeexdsp.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/libspeexdsp.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		5999FDB35B99474487E2012C /* libsrtp.a */ = {isa = PBXFileReference; name = "libsrtp.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/libsrtp.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		0C4E00501D9949FB961E3E34 /* libswresample.a */ = {isa = PBXFileReference; name = "libswresample.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/libswresample.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		F060AAD71D9B4266ABA369B3 /* libswscale.a */ = {isa = PBXFileReference; name = "libswscale.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/libswscale.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		7DF01EE6203F444086965F87 /* libtunnel.a */ = {isa = PBXFileReference; name = "libtunnel.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/libtunnel.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		FE936A4DA935491B80D8B144 /* libvo-amrwbenc.a */ = {isa = PBXFileReference; name = "libvo-amrwbenc.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/libvo-amrwbenc.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		C3F234BFBE5D4A6AA277088A /* libvpx.a */ = {isa = PBXFileReference; name = "libvpx.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/libvpx.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		1F1AAA2F05294E5ABE03681A /* libx264.a */ = {isa = PBXFileReference; name = "libx264.a"; path = "DatiMob/Plugins/cordova_voip_plugin/lib/libx264.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		8257F1675FBF4A29A8672AAE /* share */ = {isa = PBXFileReference; name = "share"; path = "cordova_voip_plugin/share"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5A6A59E7DD534A2E9572C4E8 /* Linphone.h */ = {isa = PBXFileReference; name = "Linphone.h"; path = "cordova_voip_plugin/Linphone.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		4B02B67B91B44093B4C9CADD /* include */ = {isa = PBXFileReference; name = "include"; path = "cordova_voip_plugin/include"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5319BF3AE7F44161BA9DDF22 /* AVFoundation.framework */ = {isa = PBXFileReference; name = "AVFoundation.framework"; path = "System/Library/Frameworks/AVFoundation.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		F21D2D8305334980859FD601 /* AudioToolbox.framework */ = {isa = PBXFileReference; name = "AudioToolbox.framework"; path = "System/Library/Frameworks/AudioToolbox.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		EC5E26E169D44CD9AB57D863 /* CoreFoundation.framework */ = {isa = PBXFileReference; name = "CoreFoundation.framework"; path = "System/Library/Frameworks/CoreFoundation.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		A46733116ED74BDBBECF56F2 /* CoreMedia.framework */ = {isa = PBXFileReference; name = "CoreMedia.framework"; path = "System/Library/Frameworks/CoreMedia.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		9E7FCA33837B44F2B8356A51 /* CoreData.framework */ = {isa = PBXFileReference; name = "CoreData.framework"; path = "System/Library/Frameworks/CoreData.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		EB2F075E86AC4B6AA721980C /* CoreAudio.framework */ = {isa = PBXFileReference; name = "CoreAudio.framework"; path = "System/Library/Frameworks/CoreAudio.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		E8579C0A5E504D1880F5B471 /* libz.tbd */ = {isa = PBXFileReference; name = "libz.tbd"; path = "usr/lib/libz.tbd"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = sourcecode.text-based-dylib-definition; explicitFileType = undefined; includeInIndex = 0; };
+		70282246E44A4AA696638673 /* libsqlite3.tbd */ = {isa = PBXFileReference; name = "libsqlite3.tbd"; path = "usr/lib/libsqlite3.tbd"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = sourcecode.text-based-dylib-definition; explicitFileType = undefined; includeInIndex = 0; };
+		BF85BB9B4BBC40CFB69BC765 /* libresolv.tbd */ = {isa = PBXFileReference; name = "libresolv.tbd"; path = "usr/lib/libresolv.tbd"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = sourcecode.text-based-dylib-definition; explicitFileType = undefined; includeInIndex = 0; };
+		5859A635887C430B95336CAD /* libxml2.tbd */ = {isa = PBXFileReference; name = "libxml2.tbd"; path = "usr/lib/libxml2.tbd"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = sourcecode.text-based-dylib-definition; explicitFileType = undefined; includeInIndex = 0; };
+		43E30A48D97C4AA3A6AD7C0B /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = sourcecode.text-based-dylib-definition; explicitFileType = undefined; includeInIndex = 0; };
+		EBBCBFD71B4D4F2AB871A340 /* libstdc++.6.tbd */ = {isa = PBXFileReference; name = "libstdc++.6.tbd"; path = "usr/lib/libstdc++.6.tbd"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = sourcecode.text-based-dylib-definition; explicitFileType = undefined; includeInIndex = 0; };
+		F136463483004BE0B8EB3B4D /* libstdc++.tbd */ = {isa = PBXFileReference; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = sourcecode.text-based-dylib-definition; explicitFileType = undefined; includeInIndex = 0; };
+		800535D3FDDC4145A27E2C25 /* libc++abi.tbd */ = {isa = PBXFileReference; name = "libc++abi.tbd"; path = "usr/lib/libc++abi.tbd"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = sourcecode.text-based-dylib-definition; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,57 +223,59 @@
 			buildActionMask = 2147483647;
 			files = (
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
-				5CA4D020257A4580AFF7C50B /* libmsamr.a in Frameworks */,
-				5221887F62604935BD36C253 /* libmsbcg729.a in Frameworks */,
-				5E4FC5CDC5E24F90803E0193 /* libmsopenh264.a in Frameworks */,
-				E978190CE24546DFB65467C0 /* libmssilk.a in Frameworks */,
-				FEF99C3A3A344C8B92C1B84B /* libmswebrtc.a in Frameworks */,
-				637E7ACFA72246C7A7F01F51 /* libmsx264.a in Frameworks */,
-				17B3EFC3887640EB8FD582CD /* libantlr3c.a in Frameworks */,
-				657885C61A8945EE9FABA359 /* libavcodec.a in Frameworks */,
-				E203C2D8F34D4FBD90EC3170 /* libavutil.a in Frameworks */,
-				019EC6D20F2B4AEC9EB7C3EE /* libbcg729.a in Frameworks */,
-				0E7E7CD3EC23457DBA871EC2 /* libbctoolbox.a in Frameworks */,
-				FE1DE407565E40779C617CEC /* libbellesip.a in Frameworks */,
-				36C7F40C5D4742A5A0FB42FD /* libbzrtp.a in Frameworks */,
-				F4B5128AB2E8402CA9EEF235 /* libcorec.a in Frameworks */,
-				7198CB47AC6849B2AA150316 /* libcunit.a in Frameworks */,
-				AA67E9AB5AD84C668D4A6E56 /* libebml2.a in Frameworks */,
-				F2BCE581AE0D443493852B4B /* libgsm.a in Frameworks */,
-				0E4C0D393ACF4E3F96D49115 /* liblinphone.a in Frameworks */,
-				3957559B651148BB93FA20F1 /* liblinphonetester.a in Frameworks */,
-				0F102A5C77754A1E96E4AF51 /* libmatroska2.a in Frameworks */,
-				9AD01AD5FCB9450E992A7418 /* libmediastreamer_base.a in Frameworks */,
-				69D98A74FF3D406C8B930276 /* libmediastreamer_voip.a in Frameworks */,
-				5D663073316F48E6A4D43552 /* libopencore-amrnb.a in Frameworks */,
-				9DAA92D36C5D4B798D726FEF /* libopencore-amrwb.a in Frameworks */,
-				8F17DED11A154D49941198FA /* libopenh264.a in Frameworks */,
-				A65709C100144745B832E05A /* libopus.a in Frameworks */,
-				678348E99E73428593AA1270 /* libortp.a in Frameworks */,
-				9CDE6FD7381B48EAAE2F9F48 /* libpolarssl.a in Frameworks */,
-				0495982764FF46468A5BC9C2 /* libspeex.a in Frameworks */,
-				41D51971F55A4C859515AA48 /* libspeexdsp.a in Frameworks */,
-				A24C7533D6FC4316A7613E3D /* libsrtp.a in Frameworks */,
-				EFD40E1B3C8C4775A658B9B1 /* libswresample.a in Frameworks */,
-				241B8651F91D42AD8F2E1276 /* libswscale.a in Frameworks */,
-				DED32580EDFD408DAFAD51C8 /* libtunnel.a in Frameworks */,
-				572205AA50464038AD65A8FE /* libvo-amrwbenc.a in Frameworks */,
-				0E48EB5C70784164AA853E87 /* libvpx.a in Frameworks */,
-				7E1837FD440748918B6089E2 /* libx264.a in Frameworks */,
-				19CC775FF12F4FFFBBE6AC4C /* AVFoundation.framework in Frameworks */,
-				20E00D8D60E848B8A5029639 /* AudioToolbox.framework in Frameworks */,
-				7023BE2369E6420EA0BCE4EE /* CoreFoundation.framework in Frameworks */,
-				070ECBCD89A74367AD82823C /* CoreMedia.framework in Frameworks */,
-				A812D92CAE214FFFACE52B1A /* CoreData.framework in Frameworks */,
-				F49089B76FD048AF848BF3B5 /* CoreAudio.framework in Frameworks */,
-				440FF566A9C14BF086722B7F /* libz.tbd in Frameworks */,
-				739AB6C6F4CF456180B4EC41 /* libsqlite3.tbd in Frameworks */,
-				4579C66CB0FA47A9AA848A46 /* libresolv.tbd in Frameworks */,
-				A625C3CBB4684A4C8CE433BF /* libxml2.tbd in Frameworks */,
-				B08B824859784377BB61B202 /* libstdc++.6.0.9.tbd in Frameworks */,
-				5C55016C1E3A4BADBD0CAEFF /* libstdc++.6.tbd in Frameworks */,
-				723DEDD2A2B446CDA24EC41E /* libstdc++.tbd in Frameworks */,
-				E759065D3773424BAEEB21A0 /* libc++abi.tbd in Frameworks */,
+				47987DC323E34704934AF6B2 /* Security.framework in Frameworks */,
+				14133DFB9D234A4AA079864F /* SystemConfiguration.framework in Frameworks */,
+				29D3D056FAFF43DC9170C610 /* libmsamr.a in Frameworks */,
+				C292FA0B9176422DBCF6C45A /* libmsbcg729.a in Frameworks */,
+				CC14BCE7CA624E18AE112613 /* libmsopenh264.a in Frameworks */,
+				72D825A96F40417DA3CE1B3A /* libmssilk.a in Frameworks */,
+				F0378F730EF349EF89270146 /* libmswebrtc.a in Frameworks */,
+				12EB56FD015B4C1B9E3874E1 /* libmsx264.a in Frameworks */,
+				4ACB0DC5F0CD4445906F8908 /* libantlr3c.a in Frameworks */,
+				3EE61D4AAC07453BAFBABA86 /* libavcodec.a in Frameworks */,
+				1C53039F86EB4E04919E62FD /* libavutil.a in Frameworks */,
+				486BBC4115F245A39157425B /* libbcg729.a in Frameworks */,
+				0915DFB64E824A3E85C8AC72 /* libbctoolbox.a in Frameworks */,
+				520DE40D3C824B2E86EC44A2 /* libbellesip.a in Frameworks */,
+				DB9220448A644800B1CB2272 /* libbzrtp.a in Frameworks */,
+				D56E9A49E0A34ACD90F306A6 /* libcorec.a in Frameworks */,
+				FA0C6D0A834E48F9B7B4A69E /* libcunit.a in Frameworks */,
+				7A2D864BEF744725823FF0A7 /* libebml2.a in Frameworks */,
+				CBBD0ED35D6249A3B5A96A85 /* libgsm.a in Frameworks */,
+				0DA5B8D8B5B04EF39835E90E /* liblinphone.a in Frameworks */,
+				47DE3A080610406A80B75778 /* liblinphonetester.a in Frameworks */,
+				250233CBD81F4EAB857DFD05 /* libmatroska2.a in Frameworks */,
+				7D1DC638597F495D99C930B0 /* libmediastreamer_base.a in Frameworks */,
+				9FC11A161D7E498AAC47CA3D /* libmediastreamer_voip.a in Frameworks */,
+				BB451D457607472D854C4950 /* libopencore-amrnb.a in Frameworks */,
+				7E37C0DE8A1747018A5FFD5D /* libopencore-amrwb.a in Frameworks */,
+				25ABDF9362924A27B7B394F7 /* libopenh264.a in Frameworks */,
+				07326E84E68B4145AB1AA463 /* libopus.a in Frameworks */,
+				22D928342E7946A786B93042 /* libortp.a in Frameworks */,
+				BD33E96AF4114F259580F6FE /* libpolarssl.a in Frameworks */,
+				9712B3763D194BAEA9A348E5 /* libspeex.a in Frameworks */,
+				B610813CF65F463FB1CBF21F /* libspeexdsp.a in Frameworks */,
+				45C2E5CFEB504B50A52A89CD /* libsrtp.a in Frameworks */,
+				4508B4288853479CA4F1F494 /* libswresample.a in Frameworks */,
+				D290FF198B2A4F05B6D2FECA /* libswscale.a in Frameworks */,
+				8198EA3D885F4B10BA3C0A60 /* libtunnel.a in Frameworks */,
+				9FF63AC31E4547F9822ADA17 /* libvo-amrwbenc.a in Frameworks */,
+				04B8A3D2F41045A18CC1CC4F /* libvpx.a in Frameworks */,
+				BEB0E3BE2A7841DFB9D51622 /* libx264.a in Frameworks */,
+				D50FB3EF8C5F4C5C9A2CCFBA /* AVFoundation.framework in Frameworks */,
+				A51EFDDFAE404FAE9B44360A /* AudioToolbox.framework in Frameworks */,
+				6D973D9C693D4A56AFF827C9 /* CoreFoundation.framework in Frameworks */,
+				A04CA011154C435DB711D61D /* CoreMedia.framework in Frameworks */,
+				E159831BFACE460A952CE337 /* CoreData.framework in Frameworks */,
+				E0BD56C41FFF4EEFBFA62190 /* CoreAudio.framework in Frameworks */,
+				B191692DB8EF4C6CB465563A /* libz.tbd in Frameworks */,
+				8361CBB312C843D6856BEC5F /* libsqlite3.tbd in Frameworks */,
+				6FD43AFB5C0843AA888A9746 /* libresolv.tbd in Frameworks */,
+				7AD7EAED24404B0095D8DA9C /* libxml2.tbd in Frameworks */,
+				9057EB1BDC7041389DE393BD /* libstdc++.6.0.9.tbd in Frameworks */,
+				16604A778BA94EB8BF38D12E /* libstdc++.6.tbd in Frameworks */,
+				BF951E097A2F4AA0A6AC1FAF /* libstdc++.tbd in Frameworks */,
+				2AD4C763CC6048C596352071 /* libc++abi.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,7 +292,7 @@
 				1D3623250D0F684500981E51 /* AppDelegate.m */,
 			);
 			name = Classes;
-			path = DatiMob/Classes;
+			path = "DatiMob/Classes";
 			sourceTree = SOURCE_ROOT;
 		};
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
@@ -331,7 +309,7 @@
 				EB87FDF41871DAF40020F90C /* config.xml */,
 				EB87FDF31871DA8E0020F90C /* www */,
 				EB87FDF11871DA420020F90C /* Staging */,
-				301BF52D109A57CC0062928A /* CordovaLib/CordovaLib.xcodeproj */,
+				301BF52D109A57CC0062928A /* CordovaLib.xcodeproj */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				307C750510C5A3420062BCA9 /* Plugins */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
@@ -350,7 +328,7 @@
 				ED33DF2A687741AEAF9F8254 /* Bridging-Header.h */,
 			);
 			name = "Other Sources";
-			path = DatiMob;
+			path = "DatiMob";
 			sourceTree = "<group>";
 		};
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
@@ -362,63 +340,65 @@
 				6AFF5BF81D6E424B00AB3073 /* CDVLaunchScreen.storyboard */,
 			);
 			name = Resources;
-			path = DatiMob/Resources;
+			path = "DatiMob/Resources";
 			sourceTree = "<group>";
 		};
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4736BB4A6CAE4962A2EBCCB9 /* libmsamr.a */,
-				712A2CAFE9F84C5BB7DF3C49 /* libmsbcg729.a */,
-				09236E9B87074E3DA69EED03 /* libmsopenh264.a */,
-				EC40E215796D4639B0B60283 /* libmssilk.a */,
-				318705E6BD3E4A489D2ED2C4 /* libmswebrtc.a */,
-				30BF6C6587A44E939E5E61BA /* libmsx264.a */,
-				EF8ED301857043B3A7DCE8E8 /* libantlr3c.a */,
-				05306B548BAC42829549E549 /* libavcodec.a */,
-				6417F405F5204DC69A99CA80 /* libavutil.a */,
-				E486B076965D4FA39D344F7E /* libbcg729.a */,
-				DBD4FD76A98D499B9A296EDB /* libbctoolbox.a */,
-				525EB51329924F93B1BD2EF4 /* libbellesip.a */,
-				8F2A2A515D0D47BA941A69D7 /* libbzrtp.a */,
-				B8B39AD2D6304A28BB4EFE3F /* libcorec.a */,
-				B8205A7DD19C4A5FB336CEFD /* libcunit.a */,
-				F2910C3DF0D946CF9D4AE5FD /* libebml2.a */,
-				44FFD7C1410448E48342AFCC /* libgsm.a */,
-				DBB23269B56A46D5B8A93153 /* liblinphone.a */,
-				B1371F0B077F4A8CA0C85804 /* liblinphonetester.a */,
-				EE3A8FA31F9C495FB5A6BD8E /* libmatroska2.a */,
-				2803B01EF3504A00812513CD /* libmediastreamer_base.a */,
-				9E712E7D712248D2AB5430BF /* libmediastreamer_voip.a */,
-				7496666095224DECA7793E66 /* libopencore-amrnb.a */,
-				FC33866A7B6C49F28799796E /* libopencore-amrwb.a */,
-				499FFCEA65D3460F8139B55F /* libopenh264.a */,
-				6EF450DDD76C41C696EA4C6A /* libopus.a */,
-				8C09A72C285649D6AB40A968 /* libortp.a */,
-				59C06FB213F74838AD90EA6A /* libpolarssl.a */,
-				028290F8ECAE460781F82B0F /* libspeex.a */,
-				16BB4A856D2B45B7ADFD3B04 /* libspeexdsp.a */,
-				BEA7E7D54AE94D16980848BF /* libsrtp.a */,
-				5DFBB4C304AC4DD2B4DB5396 /* libswresample.a */,
-				302E2D691D7745D78CE2015E /* libswscale.a */,
-				04C00C2B69F44EAEA0008A22 /* libtunnel.a */,
-				DFFB61C29CAF4B05B6E3BB0B /* libvo-amrwbenc.a */,
-				D96AB4AC53A34831A580BE27 /* libvpx.a */,
-				1DAC50AA36AB4041B41D77E2 /* libx264.a */,
-				4FAD785AC55D4DDFB8AEF262 /* AVFoundation.framework */,
-				6D389F7A2C9D4DC2BD04644A /* AudioToolbox.framework */,
-				73E4094F813149ACA262D7AD /* CoreFoundation.framework */,
-				FA0583CF6F824F5A8A91FE0D /* CoreMedia.framework */,
-				8FDEC6CC71C646C8BBF8021D /* CoreData.framework */,
-				F07E8AC0893E4581B0D33D75 /* CoreAudio.framework */,
-				18908337D88D41CB8C281EBD /* libz.tbd */,
-				D8B87A8AEB6D43A3B15E5DD6 /* libsqlite3.tbd */,
-				220601BBA832465C854C9527 /* libresolv.tbd */,
-				F293B20657AC4E84924E2A0B /* libxml2.tbd */,
-				5A4C76B9CF664874A0BE024F /* libstdc++.6.0.9.tbd */,
-				C0549740B72D4547B61E3576 /* libstdc++.6.tbd */,
-				5DF413C9F01A49B2A36EBD7A /* libstdc++.tbd */,
-				E09F107F2B8C48FA8097728B /* libc++abi.tbd */,
+				46BE55CF45FC4397BA316CF0 /* Security.framework */,
+				8E3A731662AB46E5BC0CF49D /* SystemConfiguration.framework */,
+				F70B62475AF3468995A983D4 /* libmsamr.a */,
+				431FC5F7E786432AA9ACDC09 /* libmsbcg729.a */,
+				7E3B731389694EB7942A5004 /* libmsopenh264.a */,
+				6701523A8D814F7C9D875E54 /* libmssilk.a */,
+				5E35C952248B485E9666B6CE /* libmswebrtc.a */,
+				FB1F1BBBF5734BFFB7007233 /* libmsx264.a */,
+				1E13C2B05CEB4421A8948E37 /* libantlr3c.a */,
+				3BD5AA2385C24CE2A9740D1C /* libavcodec.a */,
+				693F210102EE4E31855BF185 /* libavutil.a */,
+				39A56E4197424014914465D2 /* libbcg729.a */,
+				1CC3AAFC0F1749C48FF3C2C3 /* libbctoolbox.a */,
+				1BF675B898B14914A9370881 /* libbellesip.a */,
+				B24E062C99844C1A9CFE5739 /* libbzrtp.a */,
+				1E0A1C0A0F754CD1AC744902 /* libcorec.a */,
+				F1F2B37203944372A5E402DC /* libcunit.a */,
+				C0E8E2F62C3248999E6CE541 /* libebml2.a */,
+				8CD68F2EFC2341089335F3E8 /* libgsm.a */,
+				1208F4307BA74176BDAB9261 /* liblinphone.a */,
+				EC74A91F5419415D846F79D1 /* liblinphonetester.a */,
+				26CCEE380AEA47D6820C9B40 /* libmatroska2.a */,
+				5BD1F47788064C989EB3E0F3 /* libmediastreamer_base.a */,
+				78B5C06FD699487C9ECB952D /* libmediastreamer_voip.a */,
+				6197A4635F2445E1AD17A1FC /* libopencore-amrnb.a */,
+				3FABE4CD801248279367DB0C /* libopencore-amrwb.a */,
+				539514C7A1014E598EF2C7BB /* libopenh264.a */,
+				EA7D15D9EC9045088AEAD035 /* libopus.a */,
+				6F79384F3CC841C29920F418 /* libortp.a */,
+				AB5F633120EC43A88AF79D93 /* libpolarssl.a */,
+				8850DE407C8E4BB2905D2C6A /* libspeex.a */,
+				9CD9AC30D5854192AEFFAA1D /* libspeexdsp.a */,
+				5999FDB35B99474487E2012C /* libsrtp.a */,
+				0C4E00501D9949FB961E3E34 /* libswresample.a */,
+				F060AAD71D9B4266ABA369B3 /* libswscale.a */,
+				7DF01EE6203F444086965F87 /* libtunnel.a */,
+				FE936A4DA935491B80D8B144 /* libvo-amrwbenc.a */,
+				C3F234BFBE5D4A6AA277088A /* libvpx.a */,
+				1F1AAA2F05294E5ABE03681A /* libx264.a */,
+				5319BF3AE7F44161BA9DDF22 /* AVFoundation.framework */,
+				F21D2D8305334980859FD601 /* AudioToolbox.framework */,
+				EC5E26E169D44CD9AB57D863 /* CoreFoundation.framework */,
+				A46733116ED74BDBBECF56F2 /* CoreMedia.framework */,
+				9E7FCA33837B44F2B8356A51 /* CoreData.framework */,
+				EB2F075E86AC4B6AA721980C /* CoreAudio.framework */,
+				E8579C0A5E504D1880F5B471 /* libz.tbd */,
+				70282246E44A4AA696638673 /* libsqlite3.tbd */,
+				BF85BB9B4BBC40CFB69BC765 /* libresolv.tbd */,
+				5859A635887C430B95336CAD /* libxml2.tbd */,
+				43E30A48D97C4AA3A6AD7C0B /* libstdc++.6.0.9.tbd */,
+				EBBCBFD71B4D4F2AB871A340 /* libstdc++.6.tbd */,
+				F136463483004BE0B8EB3B4D /* libstdc++.tbd */,
+				800535D3FDDC4145A27E2C25 /* libc++abi.tbd */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -445,13 +425,42 @@
 		307C750510C5A3420062BCA9 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
-				C02C54CCBA13414D9B470C53 /* Linphone.m */,
-				D91DD65800274515A10B4B0A /* share */,
-				AA4F566FBC004E6B943B53D3 /* Linphone.h */,
-				7C1AE2D13BC7469A8D6AA918 /* include */,
+				F89860D5B3FF4211BCECCC39 /* CDVFile.m */,
+				9D519FDB0F36484B88ECF091 /* CDVLocalFilesystem.m */,
+				06AF81E5FDC743548D64E239 /* CDVAssetLibraryFilesystem.m */,
+				95AFCEC4697B45B29EDAD2DD /* CDVFile.h */,
+				FFCB9698C6674428BF2B92AD /* CDVLocalFilesystem.h */,
+				3606569BD7264509B1BB6EF4 /* CDVAssetLibraryFilesystem.h */,
+				252714907F14474DADAF4C94 /* CordovaHttpPlugin.m */,
+				6C0D611B3F41488E91699E19 /* TextResponseSerializer.m */,
+				E0317CB81109479193F603ED /* AFHTTPSessionManager.m */,
+				B44EBAA77C494CBF967D05DF /* AFNetworkReachabilityManager.m */,
+				0899C73F204D41D2A2E91C32 /* AFSecurityPolicy.m */,
+				B2BC6579D38444E4BB533643 /* AFURLRequestSerialization.m */,
+				E9E7A8A535D343A2A1BAC8A5 /* AFURLResponseSerialization.m */,
+				7C1941C344024D2492B3097C /* AFURLSessionManager.m */,
+				1B0E22D62F294982A1B36351 /* CordovaHttpPlugin.h */,
+				1F9AAFD896FA4C738B21188C /* TextResponseSerializer.h */,
+				46A5DDB714F64C7DA60A0397 /* AFHTTPSessionManager.h */,
+				3663749364474CA682FB335A /* AFNetworking.h */,
+				0DCBC75F1F17497C875303A0 /* AFNetworkReachabilityManager.h */,
+				26118509768843AC9C56EA75 /* AFSecurityPolicy.h */,
+				CEFEB79A0FFA409DB2F1037B /* AFURLRequestSerialization.h */,
+				6E89C81D022C4090BEF38038 /* AFURLResponseSerialization.h */,
+				278C427B4C3946DF9A40956A /* AFURLSessionManager.h */,
+				34FCF041BB1549FE956C9C60 /* WebSocketAdvanced.m */,
+				2C3A9AB58C124BBFBA7B004E /* CordovaWebsocketPlugin.m */,
+				A25A7CA1D0224F64AF25491C /* WebSocketAdvanced.h */,
+				BF49B682976A406CAC6E5D69 /* CordovaWebsocketPlugin.h */,
+				20B77A5633714EF68F11FAB7 /* CDVOrientation.m */,
+				4AD9038A27FA4F48915F2EF6 /* CDVOrientation.h */,
+				22E7E5B16BDF4C87AF95C897 /* Linphone.m */,
+				8257F1675FBF4A29A8672AAE /* share */,
+				5A6A59E7DD534A2E9572C4E8 /* Linphone.h */,
+				4B02B67B91B44093B4C9CADD /* include */,
 			);
 			name = Plugins;
-			path = DatiMob/Plugins;
+			path = "DatiMob/Plugins";
 			sourceTree = SOURCE_ROOT;
 		};
 		EB87FDF11871DA420020F90C /* Staging */ = {
@@ -480,8 +489,8 @@
 			dependencies = (
 				301BF551109A68C00062928A /* PBXTargetDependency */,
 			);
-			name = DatiMob;
-			productName = DatiMob;
+			name = "DatiMob";
+			productName = "DatiMob";
 			productReference = 1D6058910D05DD3D006BFB54 /* DatiMob.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -492,10 +501,8 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 510;
-				ORGANIZATIONNAME = "Dati Cloud LLC";
 				TargetAttributes = {
 					1D6058900D05DD3D006BFB54 = {
-						DevelopmentTeam = 4X26AQW5Y2;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -504,16 +511,12 @@
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
-			knownRegions = (
-				English,
-				en,
-			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
 			projectDirPath = "";
 			projectReferences = (
 				{
 					ProductGroup = 301BF52E109A57CC0062928A /* Products */;
-					ProjectRef = 301BF52D109A57CC0062928A /* CordovaLib/CordovaLib.xcodeproj */;
+					ProjectRef = 301BF52D109A57CC0062928A /* CordovaLib.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -579,8 +582,22 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
-				011C885E0A9240B5B767D6E3 /* Linphone.m in Sources */,
-				29B5BA9F1C8949F782E40574 /* share in Sources */,
+				DC8F12B4969E4B9CA53A2805 /* CDVFile.m in Sources */,
+				2C5BA3B52940492888650DEE /* CDVLocalFilesystem.m in Sources */,
+				74DAC035512541719D69935F /* CDVAssetLibraryFilesystem.m in Sources */,
+				BF4C3422976D49408E41BB8F /* CordovaHttpPlugin.m in Sources */,
+				7B5DA04E3C8E4E39906E9B5A /* TextResponseSerializer.m in Sources */,
+				1477BC5915674BBE9C85DD92 /* AFHTTPSessionManager.m in Sources */,
+				7DAFB058036E404C85DEC942 /* AFNetworkReachabilityManager.m in Sources */,
+				AD214C50CAE442D985FE67D7 /* AFSecurityPolicy.m in Sources */,
+				92EEF7D43952474B8281F24F /* AFURLRequestSerialization.m in Sources */,
+				B9760885BBF74EDDA9704656 /* AFURLResponseSerialization.m in Sources */,
+				35116A1844694455B0628AD6 /* AFURLSessionManager.m in Sources */,
+				E8E954E472704F06B006D57A /* WebSocketAdvanced.m in Sources */,
+				248073F6DF1A4545AFC8A438 /* CordovaWebsocketPlugin.m in Sources */,
+				E6B4F0AD3EB148A7BED45E47 /* CDVOrientation.m in Sources */,
+				EE80993A3BCC47B48E29B200 /* Linphone.m in Sources */,
+				D39DEF6ED8D44E97A0C6E68F /* share in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -605,23 +622,18 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = NO;
-				DEVELOPMENT_TEAM = 4X26AQW5Y2;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DatiMob/DatiMob-Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = "";
-				HEADER_SEARCH_PATHS = (
-					"\"$(SRCROOT)/DatiMob/Plugins/cordova_voip_plugin/include\"",
-					"\"$(SRCROOT)/DatiMob/Plugins/cordova_voip_plugin/include/mediastreamer2\"",
-					"\"$(SRCROOT)/DatiMob/Plugins/cordova_voip_plugin/include/linphone\"",
-					"\"$(SRCROOT)/DatiMob/Plugins/cordova_voip_plugin/include/ortp\"",
-					"\"$(SRCROOT)/DatiMob/Plugins/cordova_voip_plugin/include/belle-sip\"",
-				);
 				INFOPLIST_FILE = "DatiMob/DatiMob-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.daticloud.datimob;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)/Plugins/cordova_voip_plugin/lib/mediastreamer/plugins\"",
@@ -662,10 +674,6 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)/Plugins/cordova_voip_plugin/lib\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)/Plugins/cordova_voip_plugin/lib\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.daticloud.datimob;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -679,21 +687,16 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = YES;
-				DEVELOPMENT_TEAM = 4X26AQW5Y2;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DatiMob/DatiMob-Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = "";
-				HEADER_SEARCH_PATHS = (
-					"\"$(SRCROOT)/DatiMob/Plugins/cordova_voip_plugin/include\"",
-					"\"$(SRCROOT)/DatiMob/Plugins/cordova_voip_plugin/include/mediastreamer2\"",
-					"\"$(SRCROOT)/DatiMob/Plugins/cordova_voip_plugin/include/linphone\"",
-					"\"$(SRCROOT)/DatiMob/Plugins/cordova_voip_plugin/include/ortp\"",
-					"\"$(SRCROOT)/DatiMob/Plugins/cordova_voip_plugin/include/belle-sip\"",
-				);
 				INFOPLIST_FILE = "DatiMob/DatiMob-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.daticloud.datimob;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)/Plugins/cordova_voip_plugin/lib/mediastreamer/plugins\"",
@@ -734,10 +737,6 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)/Plugins/cordova_voip_plugin/lib\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)/Plugins/cordova_voip_plugin/lib\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.daticloud.datimob;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "armv7 armv7s";
 			};
 			name = Release;
 		};
@@ -776,23 +775,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				"HEADER_SEARCH_PATHS[arch=*]" = (
-					"\"$(TARGET_BUILD_DIR)/usr/local/lib/include\"",
-					"\"$(OBJROOT)/UninstalledProducts/include\"",
-					"\"$(OBJROOT)/UninstalledProducts/$(PLATFORM_NAME)/include\"",
-					"\"$(BUILT_PRODUCTS_DIR)\"",
-					"\"$(SRCROOT)/DatiMob/Plugins/cordova_voip_plugin/include\"\U0000",
-					"\"$(SRCROOT)/DatiMob/Plugins/cordova_voip_plugin/include/belle-sip\"\U0000",
-					"\"$(SRCROOT)/DatiMob/Plugins/cordova_voip_plugin/include/ortp\"\U0000",
-					"\"$(SRCROOT)/DatiMob/Plugins/cordova_voip_plugin/include/mediastreamer2\"\U0000",
-					"\"$(SRCROOT)/DatiMob/Plugins/cordova_voip_plugin/include/linphone\"\U0000",
-				);
-				INFOPLIST_FILE = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.daticloud.datimob;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.daticloud.datimob;
 			};
 			name = Debug;
 		};
@@ -830,22 +816,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = (
-					"\"$(TARGET_BUILD_DIR)/usr/local/lib/include\"",
-					"\"$(OBJROOT)/UninstalledProducts/include\"",
-					"\"$(OBJROOT)/UninstalledProducts/$(PLATFORM_NAME)/include\"",
-					"\"$(BUILT_PRODUCTS_DIR)\"",
-					"\"$(SRCROOT)/DatiMob/Plugins/cordova_voip_plugin/include\"\U0000",
-					"\"$(SRCROOT)/DatiMob/Plugins/cordova_voip_plugin/include/linphone\"\U0000",
-					"\"$(SRCROOT)/DatiMob/Plugins/cordova_voip_plugin/include/ortp\"\U0000",
-					"\"$(SRCROOT)/DatiMob/Plugins/cordova_voip_plugin/include/belle-sip\"\U0000",
-					"\"$(SRCROOT)/DatiMob/Plugins/cordova_voip_plugin/include/mediastreamer2\"\U0000",
-				);
-				INFOPLIST_FILE = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.daticloud.datimob;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.daticloud.datimob;
 			};
 			name = Release;
 		};

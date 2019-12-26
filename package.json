@@ -34,8 +34,8 @@
       "cordova_voip_plugin": {}
     },
     "platforms": [
-      "ios",
-      "android"
+      "android",
+      "ios"
     ]
   }
 }

@@ -17,27 +17,45 @@
  * under the License.
  */
  
+var time_call;
+var sec=0,min=0;
+var Sip_status="Registering...";
+
+function timer_call(t){
+	if(t=="timer_call"){
+		$('#infos_call').append('<br><span id="timer" style="font-size: 25px;">00:00</span>');
+	}
+	if($('#timer').length==0){
+		time_call=null;
+		return;
+	}
+	time_call=setTimeout(function () {
+		sec++;
+		if(sec>59){
+			sec=0;
+			min++;
+		}
+		var v_sec=sec,v_min=min;
+		if(sec<10)
+			v_sec = '0'+sec;
+		if(min<10)
+			v_min = '0'+min;
+		$('#timer').text(v_min+':'+v_sec);
+		timer_call();
+	},1000);
+}
+ 
 function endCall(){
-	$('#send_call').hide();
-	$('#timer').remove();
-	
 	if(Speaker)
 		sipManager.toggleSpeaker();
 
-	window.plugins.Sip.hangup(function (e) { console.log(e) }, function (e) { console.log(e) });
-	
-	var req={};
-	req.type = "sipcallend";
-	req.registerednum=sipManager.User.tel;
-	req.registeredpass=sipManager.User.pass;
-	req.socketclienttype = "MOBILE_CLIENT";
-	req.sessionid = user.sessionid;
-	req = JSON.stringify(req);
-	sendMessage(req);
+	$('.pqge_modal ').remove();
+	$('.keypad ').css("display","block");
 }
  
-var notif_timer=0;
+var notif_r=0;
 var Speaker=false;
+var call_status={text:""};
 var sipManager = {
 	User:{
 		tel: "909)5284904",
@@ -46,11 +64,15 @@ var sipManager = {
 	},
 	callingNumber:null,
 	isRegister:false,
+	iScalling:false,
 	init: function (user) {
-		if(user == undefined)
-			user = sipManager.User;
 		console.log(JSON.stringify(user));
-		if(sipManager.isRegister==false || sipManager.User.tel != user.tel || sipManager.User.pass != user.pass || sipManager.User.domaine != user.domaine){
+		if(user == undefined | user.tel==undefined | user.pass==undefined | user.tel=="" | user.pass==""){
+			user = sipManager.User;
+			//user = null;
+		}
+		if(sipManager.isRegister==false || (sipManager.User != user) ){
+			
 			sipManager.User=user;
 			sipManager.register();
 		}
@@ -60,27 +82,56 @@ var sipManager = {
 		}
 	},
 	register: function () {
-		console.log("enregistrement...");
-		window.plugins.Sip.login(sipManager.User.tel, sipManager.User.pass, sipManager.User.domaine, function (e) {
+		console.log("enregistrement... "+JSON.stringify(sipManager.User));
+		Sip_status="Registering...";
+		app.emit('Sip_status', "Registering...");
+		if(page=="send_call"){
+			call_status.text('Registring...');
+		}
+		window.plugins.Sip.login(sipManager.User.tel, sipManager.User.pass, sipManager.User.domaine, function (e) { 
 			//	alert(e);
+			app.emit('Sip_status', e);
+			Sip_status=e;
+			if(page=="send_call"){
+				call_status.text(e);
+			}
 				console.log(e);
 			if (e == 'RegistrationSuccess') {
+				$('#not').remove();
 				sipManager.isRegister = true;
 				sipManager.listen();
 				sipManager.call(sipManager.callingNumber);
+				
+				notif_r=setTimeout(function () {
+					clearTimeout(notif_r);
+					sipManager.register();
+				},300000);
 			} else {
 				sipManager.isRegister = false;
-				notif_timer=setTimeout(function () {
-					clearTimeout(notif_timer);
+				notif_r=setTimeout(function () {
+					clearTimeout(notif_r);
 					sipManager.register();
-				},2000);
+				},3000);
 			}
 
 		}, function (e) { console.log(e) })
 	},
 	call: function (sipNumber) {
+		if(sipManager.iScalling){
+			console.log("sipManager.iScalling true...");
+			return;
+		}
 		if(sipManager.isRegister==true && sipNumber!=null){
+			/*
+			if(page!="send_call"){
+				getPage("send_call",function(){
+					$('#call_status').text('Connecting...');
+					$('#call_num').text(sipNumber);
+					call_status=$('#call_status');
+				});
+			}*/
 			sipManager.callingNumber=null;
+			sipManager.iScalling=true;
 			window.plugins.Sip.call(sipNumber, sipManager.User.tel, sipManager.events, sipManager.events);
 		}
 		else{
@@ -91,6 +142,15 @@ var sipManager = {
 		window.plugins.Sip.listenCall(sipManager.events, sipManager.events);
 	},
 	hangup: function () {
+		window.plugins.Sip.hangup(function (e) { console.log(e) }, function (e) { console.log(e) });
+		var req={};
+		req.type = "sipcallend";
+		req.registerednum=sipManager.User.tel;
+		req.registeredpass=sipManager.User.pass;
+		req.socketclienttype = "MOBILE_CLIENT";
+		req.sessionid = user.sessionid;
+		req = JSON.stringify(req);
+		sendMessage(req,"system");
 		endCall();
 	},
 	toggleSpeaker: function () {
@@ -103,7 +163,7 @@ var sipManager = {
 					$('#Speaker').css('color', '#fff');
 					Speaker=false;
 				}
-			}, null
+			}, function(e){console.log(e);}
 		);
 	},
 	toggleMute: function () {
@@ -111,103 +171,67 @@ var sipManager = {
 				if(e==1){
 					$('#Mute').css('color', '#f00');
 				}
-				else
+				else{
 					$('#Mute').css('color', '#fff');
-			}, null
+				}
+			}, function(e){console.log(e);}
 		);
 	},
 	events: function (e) {
 		console.log(e);
 	//	alert(e);
-		if (e == 'Incoming') {
-			//cordova.plugins.CordovaCall.receiveCall('Incoming');
-			/*
-			cordova.plugins.CordovaCall.on('answer', function(e){
-				window.plugins.Sip.accept(true, sipManager.events, sipManager.events);
-			});
-			//cordova.plugins.CordovaCall.on('reject', function(e){
-				sipManager.hangup();
-			});
-			//cordova.plugins.CordovaCall.on('hangup', function(e){
-				sipManager.hangup();
-			});
-			/*
-			if (r == true) {
-				window.plugins.Sip.accept(true, sipManager.events, sipManager.events);
-			} else {
-
-			}*/
+		if (e.indexOf('Incoming')>=0) {
+			$('#call_status').text('Incoming...');
 		}
-		if (e == 'Connected') {
-			//cordova.plugins.CordovaCall.connectCall(sipManager.events, sipManager.events);
-			//$('#send_call').hide();
+		if(e.indexOf('Connected')>=0){
+			call_status.text('Connected');
 			timer_call('timer_call');
 			console.log("Connected!");
 			sipManager.listen();
 		}
-		if (e == 'Error') {
+		if(e.indexOf('OutgoingInit')>=0) {
+			var ts=setTimeout(function () {
+				clearTimeout(ts);
+				call_status.text('Starting outgoing call...');
+			//	alert(call_status.text());
+			},5);
+		}
+		if(e.indexOf('OutgoingEarlyMedia')>=0) {
+			var ts=setTimeout(function () {
+				clearTimeout(ts);
+				call_status.text('Ringing...');
+				//timer_call('timer_call');
+			},5);
+		}
+		if(e.indexOf('Error')>=0) {
+			sipManager.iScalling=false;
 			console.log("Call Error!");
-			$('#send_call').hide();
-			sipManager.listen();
-			sipManager.hangup();
+			var call_status_text='Service Unavailable!';
+			if(e.indexOf('Temporarily Unavailable')>=0) {
+				call_status_text='Temporarily Unavailable!';
+			}
+			call_status.text(call_status_text);
+			var ts=setTimeout(function () {
+				clearTimeout(ts);
+				setAlert("alert-info", call_status_text, function(result){
+					sipManager.listen();
+					sipManager.hangup();
+				}, null,4,false);
+			},3000);
 		}
-		if (e == 'End') {
+		if (e.indexOf('End')>=0) {
+			sipManager.iScalling=false;
 			console.log("Call End!");
-			$('#send_call').hide();
-			sipManager.listen();
-			sipManager.hangup();
+			call_status.text('Call End!');
+			var ts=setTimeout(function () {
+				clearTimeout(ts);
+				sipManager.listen();
+				endCall();
+			},2000);
 		}
-
-
+		
+		sipManager.listen();
 	}
 }
 
-var app = {
-    // Application Constructor
-    initialize: function() {
-        document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
-    },
-
-    // deviceready Event Handler
-    //
-    // Bind any cordova events here. Common events are:
-    // 'pause', 'resume', etc.
-    onDeviceReady: function() {
-		document.addEventListener("backbutton", onBackKeyDown, false);
-		function onBackKeyDown() {
-			last_page();/*
-			//cordova.plugins.CordovaCall.on('answer', function(e){alert('answer: '+e);});
-			//cordova.plugins.CordovaCall.on('hangup', function(e){alert('hangup: '+e);});
-			//cordova.plugins.CordovaCall.on('reject', function(e){alert('reject: '+e);});
-			//cordova.plugins.CordovaCall.on('receiveCall', function(e){alert('receiveCall: '+e);});
-			////cordova.plugins.CordovaCall.receiveCall('+237698672241',function(e){},function(e){alert(e);});
-			////cordova.plugins.CordovaCall.on('mute', function(e){alert('mute: '+e);});// seulement pour IOS
-			////cordova.plugins.CordovaCall.sendCall('Daniel Marcus', 123,function(e){},function(e){alert(e);});
-			////cordova.plugins.CordovaCall.callNumber('Daniel Marcus',function(e){},function(e){alert(e);});
-			*/
-		}
-        this.receivedEvent('deviceready');
-    },
-
-    // Update DOM on a Received Event
-    receivedEvent: function(id) {/*
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
-
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
-		
-*/
-		console.log(JSON.stringify(user));
-        console.log('Received Event: ' + id);
-		/*window.plugins.Sip.show('Hello Ionic !');
-		sipManager.User.domaine="192.168.8.100";
-		sipManager.User.tel="1003";
-		sipManager.User.pass="1234";*/
-		sipManager.init(user.SipUser);	
-    }
-};
-
-app.initialize();
 

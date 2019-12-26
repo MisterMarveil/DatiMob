@@ -1,58 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+	<script>
+		var iso2=null;
+		var start = window.localStorage.getItem("start");
+		start = JSON.parse(start);
+		if(start==null){
+			start ={};
+			start.counter = 0;
+			start.start = false;
+			window.localStorage.setItem("start", JSON.stringify(start));
+		}
+		//start.start=false;
+		start.counter = parseInt(start.counter, 10);
+		if(!start.start && start.counter<2){
+			window.location.href="presentation.html";
+		}
+		else{
+			start.counter = start.counter+1;//start.counter=0;
+			start.hide=false;
+			window.localStorage.setItem("start", JSON.stringify(start));
+			
+			//alert(JSON.stringify(start));
+		}
+	</script>
     <head>
-        <script src="./assets/js/core/jquery.min.js" type="text/javascript"></script>
-		<script>
-			var iso2=null;
-			var start = window.localStorage.getItem("start");
-			start = $.parseJSON(start);
-			if(start==null){
-				start ={};
-				start.counter = 0;
-				start.start = false;
-				window.localStorage.setItem("start", JSON.stringify(start));
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="theme-color" content="#2196f3">
+        <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap:">
+        <title>Framework7</title>
+        <link rel="stylesheet" href="css/framework7.bundle.min.css">
+        <link rel="stylesheet" href="css/fontawesome-5.10.1/css/all.css">
+        <link rel="stylesheet" href="css/app.css">
+        <link rel="apple-touch-icon" href="img/f7-icon-square.png">
+        <link rel="icon" href="img/f7-icon.png">
+        <style>
+            .titre{
+				font-size:25px;
+				margin-left:5%;
+				margin-top:5%;
+				font-weight:bold;
+				color:#425263;
 			}
-			//start.start=false;
-			start.counter = parseInt(start.counter, 10);
-			if(!start.start && start.counter<1){
-				window.location.href="presentation.html";
-			}
-			else{
-				start.counter = start.counter+1;//start.counter=0;
-				start.hide=false;
-				window.localStorage.setItem("start", JSON.stringify(start));
-				//alert(JSON.stringify(start));
-			}
-		</script>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/png" href="./assets/img/logos/logo__.png">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-        <title>
-            DatiMob
-        </title>
-        <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
-        <!--     Fonts and icons     -->
-        <!-- CSS Files --> 
-		<link rel="stylesheet" href="./assets/css/jquery-ui.css">
-		<link href="./assets/css/mobile_ff1d6e1e63ffa3f2b016.css" rel="stylesheet">
-		<link data-olark="true" rel="stylesheet" href="./assets/css/theme.css" type="text/css">
-		<link href="./assets/css/material-kit.css?" id=material rel="stylesheet" />
-		<link rel="stylesheet" href="./assets/css/Dati_intlTelInput.css">
-		<link rel="stylesheet" href="./assets/css/fontawesome-5.10.1/css/all.css">
-		<link rel="stylesheet" href="./assets/css/menu.css">
+        </style>
+		<style id="style"></style>
     </head>
     <body>
-		<div style='background-color:#2196F3;width:100%;height:100%;'></div>
-        <!--   Core JS Files   -->
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script src="./assets/js/translations.js" type="text/javascript"></script> 
-	<!-- 	<script src="./assets/js/intlTelInput.js"></script>   -->
-		<script src="./assets/js/Dati_intlTelInput.js"></script>
-   
-        <script src="./assets/js/jquery-ui.js" type="text/javascript"></script> 
-        <script src="./assets/js/pages.js" type="text/javascript"></script>  
-        <script src="./assets/js/echo_client.js" type="text/javascript"></script> 
-    
+        <div id="app">
+            <div class="view view-main safe-areas" data-master-detail-breakpoint="800" data-url="/">
+                <div class="page">
+                </div>
+            </div>
+        </div>
+        <script src="cordova.js"></script>
+        <script src="js/index.js"></script>
+        <script src="js/translations.js" type="text/javascript"></script> 
+        <script src="js/framework7.bundle.js"></script>
+		<script src="js/framework7-keypad.js"></script>
+        <script src="js/routes.js"></script>
+        <script src="js/Dati_intlTelInput.js"></script>
+        <script src="js/echo_client.js"></script>
+        <script src="js/app.js"></script>
+        <script>
+			
+		</script>
     </body>
 </html>
